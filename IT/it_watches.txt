@@ -1,0 +1,565 @@
+<headline:template>
+    <if:param key="FILL-IN">
+        <then>
+            
+            <if:dst:has key="male.plural">
+                <then>
+                    <text value="Altri " />
+                </then>
+                <else>
+                    <if:dst:has key="female.plural">
+                        <then>
+                            <text value="Altre " />
+                        </then>
+                        <else>
+                            <if:dst:has key="female.singular">
+                                <then>
+                                    <text value="Altra " />
+                                </then>
+                                <else>
+                                    <if:dst:has key="male.singular">
+                                        <then>
+                                            <text value="Altro " />
+                                        </then>
+                                        <else>
+                                            <text value="Altri " />
+                                        </else>
+                                    </if:dst:has>
+                                </else>
+                            </if:dst:has>
+                        </else>
+                    </if:dst:has>
+                </else>
+            </if:dst:has>
+            
+        </then>
+    </if:param>
+    
+    
+    <tag type="COUPON" key="static" />
+    
+    
+    <if:dst:has key="male.plural">
+        <then>
+            <if:tag:has type="dst" key="male.plural.split.name">
+                <then>
+                    <tag type="dst" key="male.plural.split.name" />
+                    
+                    <tag type="AUX_1" key="male.plural" />
+                    <tag type="DISPLAY" key="male.plural" />
+                    <tag type="COUNTRY" key="male.plural" />
+                    <tag type="SHAPE" key="male.plural" />
+                    <tag type="MOVEMENT" key="male.plural" />
+                    <tag type="LOOK" key="male.plural" />
+                    <if:tag:type type="SUB_COLOR">
+                        <then>
+                            <tag type="SUB_COLOR" key="male.plural" />
+                        </then>
+                        <else>
+                            <tag type="COLOR" key="male.plural" />
+                        </else>
+                    </if:tag:type>
+                    <tag type="MATERIAL" />
+                    <tag type="SUB_MATERIAL" />
+                    <tag type="KARAT_GOLD"  prefix="da " /> 
+                    <tag type="NICKEL_FREE" />
+                    <tag type="CASE_GLASS" key="male.singular" /> 
+                    <tag type="WATERPROOF" key="male.plural" />
+                    <tag type="PATTERN" key="male.plural" /> 
+                    <tag type="MOTIVE" key="male.singular" /> 
+                    <tag type="SIZE" />
+                    <tag type="BAND_TYPE" key="male.singular" /> 
+                    
+                    <tag type="dst" key="male.plural.split.name2" />
+                    <tag type="WATER_RESISTANCE" prefix="resistenza all'acqua "/> 
+                    <tag type="FEATURE" key="male.singular" />
+                    
+                    <tag type="DISCIPLINE" key="male.singular"/>
+                    
+                    <tag type="CASE_MATERIAL" key="male.singular" prefix="con " />
+                    <tag type="SCREEN_SIZE" key="male.singular" />
+                    <tag type="BAND_MATERIAL" key="male.singular" prefix="con " />
+                    <tag type="FASTENING" key="male.singular" prefix="con " />
+                    <tag type="FINISH" key="male.singular" prefix="con " />
+                    <tag type="MEASURES" prefix="con "/>
+                    <tag type="DIGITS" key="male.singular"/>
+                    <tag type="AUX_2" key="male.singular" prefix="per " />
+                    <tag type="OCCASION" prefix="per "/>
+                    <tag type="SUB_OCCASIONS" prefix="per "/>
+                    <tag type="EDITION" prefix="edizione "/>
+                    <tag type="COMPATIBILITY" prefix="compatibile con "/>
+                    <tag type="OPERATING_SYSTEM" prefix="per "/>
+                    <tag type="NETWORK" prefix="con connessione "/>
+                </then>
+                <else>
+                    <tag type="dst" key="male.plural" />
+                    
+                    <tag type="AUX_1" key="male.plural" />
+                    <tag type="DISPLAY" key="male.plural" />
+                    <tag type="COUNTRY" key="male.plural" />
+                    <tag type="SHAPE" key="male.plural" />
+                    <tag type="MOVEMENT" key="male.plural" />
+                    <tag type="LOOK" key="male.plural" />
+                    <if:tag:type type="SUB_COLOR">
+                        <then>
+                            <tag type="SUB_COLOR" key="male.plural" />
+                        </then>
+                        <else>
+                            <tag type="COLOR" key="male.plural" />
+                        </else>
+                    </if:tag:type>
+                    <tag type="MATERIAL" />
+                    <tag type="SUB_MATERIAL" />
+                    <tag type="KARAT_GOLD"  prefix="da " /> 
+                    <tag type="NICKEL_FREE" />
+                    <tag type="CASE_GLASS" key="male.singular" /> 
+                    <tag type="WATERPROOF" key="male.plural" />
+                    <tag type="PATTERN" key="male.plural" />
+                    <tag type="MOTIVE" key="male.singular" /> 
+                    <tag type="SIZE" />
+                    <tag type="BAND_TYPE" key="male.singular" /> 
+                    
+                    <tag type="WATER_RESISTANCE" prefix="resistenza all'acqua "/> 
+                    <tag type="FEATURE" key="male.singular"  />
+                    <tag type="DISCIPLINE" key="male.singular"/>
+                    <tag type="CASE_MATERIAL" key="male.singular" prefix="con " />
+                    <tag type="SCREEN_SIZE" key="male.singular" />
+                    <tag type="BAND_MATERIAL" key="male.singular" prefix="con " />
+                    <tag type="FASTENING" key="male.singular" prefix="con " />
+                    <tag type="FINISH" key="male.singular" prefix="con " />
+                    <tag type="MEASURES" prefix="con "/>
+                    <tag type="DIGITS" key="male.singular"/>
+                    <tag type="AUX_2" key="male.singular" prefix="per " />
+                    <tag type="OCCASION" prefix="per "/>
+                    <tag type="SUB_OCCASIONS" prefix="per "/>
+                    <tag type="EDITION" prefix="edizione "/>
+                    <tag type="COMPATIBILITY" prefix="compatibile con "/>
+                    <tag type="OPERATING_SYSTEM" prefix="per "/>
+                    <tag type="NETWORK" prefix="con connessione "/>
+                </else>
+            </if:tag:has>
+            
+        </then>
+        
+        <else>
+            <if:dst:has key="female.plural">
+                
+                <then>
+                    <if:tag:has type="dst" key="female.plural.split.name">
+                        <then>
+                            <tag type="dst" key="female.plural.split.name" />
+                            
+                            <tag type="AUX_1" key="female.plural" />
+                            <tag type="DISPLAY" key="male.plural" />
+                            <tag type="COUNTRY" key="male.plural" />
+                            <tag type="SHAPE" key="male.plural" />
+                            <tag type="MOVEMENT" key="male.plural" />
+                            <tag type="LOOK" key="female.plural" />
+                            <if:tag:type type="SUB_COLOR">
+                                <then>
+                                    <tag type="SUB_COLOR" key="female.plural" />
+                                </then>
+                                <else>
+                                    <tag type="COLOR" key="female.plural" />
+                                </else>
+                            </if:tag:type>
+                            <tag type="MATERIAL" />
+                            <tag type="SUB_MATERIAL" />
+                            <tag type="KARAT_GOLD"  prefix="da " /> 
+                            <tag type="NICKEL_FREE" />
+                            <tag type="CASE_GLASS" key="male.singular" /> 
+                            <tag type="WATERPROOF" key="female.plural" /> 
+                            <tag type="PATTERN" key="female.plural" />
+                            <tag type="MOTIVE" key="male.singular" /> 
+                            <tag type="SIZE" />
+                            <tag type="BAND_TYPE" key="male.singular" />
+                            
+                            <tag type="dst" key="female.plural.split.name2" />
+                            <tag type="WATER_RESISTANCE" prefix="resistenza all'acqua "/> 
+                            <tag type="FEATURE" key="male.singular" />
+                            <tag type="DISCIPLINE" key="male.singular"/>
+                            <tag type="CASE_MATERIAL" key="male.singular" prefix="con " />
+                            <tag type="SCREEN_SIZE" key="male.singular" />
+                            <tag type="BAND_MATERIAL" key="male.singular" prefix="con " />
+                            <tag type="FASTENING" key="male.singular" prefix="con " />
+                            <tag type="FINISH" key="male.singular" prefix="con " />
+                            <tag type="MEASURES" prefix="con "/>
+                            <tag type="DIGITS" key="male.singular"/>
+                            <tag type="AUX_2" key="male.singular" prefix="per " />
+                            <tag type="OCCASION" prefix="per "/>
+                            <tag type="SUB_OCCASIONS" prefix="per "/>
+                            <tag type="EDITION" prefix="edizione "/>
+                            <tag type="COMPATIBILITY" prefix="compatibile con "/>
+                            <tag type="OPERATING_SYSTEM" prefix="per "/>
+                            <tag type="NETWORK" prefix="con connessione "/>
+                        </then>
+                        <else>
+                            <tag type="dst" key="female.plural" />
+                            
+                            
+                            <tag type="AUX_1" key="female.plural" />
+                            <tag type="DISPLAY" key="male.plural" />
+                            <tag type="COUNTRY" key="male.plural" />
+                            <tag type="SHAPE" key="male.plural" />
+                            <tag type="MOVEMENT" key="male.plural" />
+                            <tag type="LOOK" key="female.plural" />
+                            <if:tag:type type="SUB_COLOR">
+                                <then>
+                                    <tag type="SUB_COLOR" key="female.plural" />
+                                </then>
+                                <else>
+                                    <tag type="COLOR" key="female.plural" />
+                                </else>
+                            </if:tag:type>
+                            <tag type="MATERIAL" />
+                            <tag type="SUB_MATERIAL" />
+                            <tag type="KARAT_GOLD" prefix="da " /> 
+                            <tag type="NICKEL_FREE" />
+                            <tag type="CASE_GLASS" key="male.singular" /> 
+                            <tag type="WATERPROOF" key="female.plural" /> 
+                            <tag type="PATTERN" key="female.plural" />
+                            <tag type="MOTIVE" key="male.singular" /> 
+                            <tag type="SIZE" />
+                            <tag type="BAND_TYPE" key="male.singular" /> 
+                            
+                            <tag type="WATER_RESISTANCE" prefix="resistenza all'acqua "/>
+                            <tag type="FEATURE" key="male.singular"  />
+                            <tag type="DISCIPLINE" key="male.singular"/>
+                            <tag type="CASE_MATERIAL" key="male.singular" prefix="con " />
+                            <tag type="SCREEN_SIZE" key="male.singular" />
+                            <tag type="BAND_MATERIAL" key="male.singular" prefix="con " />
+                            <tag type="FASTENING" key="male.singular" prefix="con " />
+                            <tag type="FINISH" key="male.singular" prefix="con " />
+                            <tag type="MEASURES" prefix="con "/>
+                            <tag type="DIGITS" key="male.singular"/>
+                            <tag type="AUX_2" key="male.singular" prefix="per " />
+                            <tag type="OCCASION" prefix="per "/>
+                            <tag type="SUB_OCCASIONS" prefix="per "/>
+                            <tag type="EDITION" prefix="edizione "/>
+                            <tag type="COMPATIBILITY" prefix="compatibile con "/>
+                            <tag type="OPERATING_SYSTEM" prefix="per "/>
+                            <tag type="NETWORK" prefix="con connessione "/>
+                        </else>
+                        
+                    </if:tag:has>
+                </then>
+                
+                <else>  
+                    
+                    <if:dst:has key="male.singular">
+                        <then>
+                            <if:tag:has type="dst" key="male.singular.split.name">
+                                <then>
+                                    <tag type="dst" key="male.singular.split.name" />
+                                    
+                                    <tag type="AUX_1" key="male.singular" />
+                                    <tag type="DISPLAY" key="male.singular" />
+                                    <tag type="COUNTRY" key="male.singular" />
+                                    <tag type="SHAPE" key="male.singular" />
+                                    <tag type="MOVEMENT" key="male.singular" />
+                                    <tag type="LOOK" key="male.singular" />
+                                    <if:tag:type type="SUB_COLOR">
+                                        <then>
+                                            <tag type="SUB_COLOR" key="male.singular" />
+                                        </then>
+                                        <else>
+                                            <tag type="COLOR" key="male.singular" />
+                                        </else>
+                                    </if:tag:type>
+                                    <tag type="MATERIAL" />
+                                    <tag type="SUB_MATERIAL" />
+                                    <tag type="KARAT_GOLD"  prefix="da " /> 
+                                    <tag type="NICKEL_FREE" />
+                                    <tag type="CASE_GLASS" key="male.singular" /> 
+                                    <tag type="WATERPROOF" key="male.singular" /> 
+                                    <tag type="PATTERN" key="male.singular" /> 
+                                    <tag type="MOTIVE" key="male.singular" /> 
+                                    <tag type="SIZE" />
+                                    <tag type="BAND_TYPE" key="male.singular" /> 
+                                    
+                                    <tag type="dst" key="male.singular.split.name2" />
+                                    
+                                    <tag type="WATER_RESISTANCE" prefix="resistenza all'acqua "/>
+                                    <tag type="FEATURE" key="male.singular"  />
+                                    <tag type="DISCIPLINE" key="male.singular"/>
+                                    <tag type="CASE_MATERIAL" key="male.singular" prefix="con " />
+                                    <tag type="SCREEN_SIZE" key="male.singular" />
+                                    <tag type="BAND_MATERIAL" key="male.singular" prefix="con " />
+                                    <tag type="FASTENING" key="male.singular" prefix="con " />
+                                    <tag type="FINISH" key="male.singular" prefix="con " />
+                                    <tag type="MEASURES" prefix="con "/>
+                                    <tag type="DIGITS" key="male.singular"/>
+                                    <tag type="AUX_2" key="male.singular" prefix="per " />
+                                    <tag type="OCCASION" prefix="per "/>
+                                    <tag type="SUB_OCCASIONS" prefix="per "/>
+                                    <tag type="EDITION" prefix="edizione "/>
+                                    <tag type="COMPATIBILITY" prefix="compatibile con "/>
+                                    <tag type="OPERATING_SYSTEM" prefix="per "/>
+                                    <tag type="NETWORK" prefix="con connessione "/>
+                                </then>
+                                <else>
+                                    <tag type="dst" key="male.singular" />
+                                    
+                                    
+                                    <tag type="AUX_1" key="male.singular" /> 
+                                    <tag type="DISPLAY" key="male.singular" />
+                                    <tag type="COUNTRY" key="male.singular" />
+                                    <tag type="SHAPE" key="male.singular" />
+                                    <tag type="MOVEMENT" key="male.singular" />
+                                    <tag type="LOOK" key="male.singular" />
+                                    <if:tag:type type="SUB_COLOR">
+                                        <then>
+                                            <tag type="SUB_COLOR" key="male.singular" />
+                                        </then>
+                                        <else>
+                                            <tag type="COLOR" key="male.singular" />
+                                        </else>
+                                    </if:tag:type>
+                                    <tag type="MATERIAL" />
+                                    <tag type="SUB_MATERIAL" />
+                                    <tag type="KARAT_GOLD"  prefix="da " /> 
+                                    <tag type="NICKEL_FREE" />
+                                    <tag type="CASE_GLASS" key="male.singular" /> 
+                                    <tag type="WATERPROOF" key="male.singular" /> 
+                                    <tag type="PATTERN" key="male.singular" />
+                                    <tag type="MOTIVE" key="male.singular" /> 
+                                    <tag type="SIZE" />		
+                                    
+                                    <tag type="BAND_TYPE" key="male.singular" /> 
+                                    
+                                    <tag type="WATER_RESISTANCE" prefix="resistenza all'acqua "/>
+                                    <tag type="FEATURE" key="male.singular"  />
+                                    <tag type="DISCIPLINE" key="male.singular"/>
+                                    <tag type="CASE_MATERIAL" key="male.singular" prefix="con " />
+                                    <tag type="SCREEN_SIZE" key="male.singular" />
+                                    <tag type="BAND_MATERIAL" key="male.singular" prefix="con " />
+                                    <tag type="FASTENING" key="male.singular" prefix="con " />
+                                    <tag type="FINISH" key="male.singular" prefix="con " />
+                                    <tag type="MEASURES" prefix="con "/>
+                                    <tag type="DIGITS" key="male.singular"/>
+                                    <tag type="AUX_2" key="male.singular" prefix="per " />
+                                    <tag type="OCCASION" prefix="per "/>
+                                    <tag type="SUB_OCCASIONS" prefix="per "/>
+                                    <tag type="EDITION" prefix="edizione "/>
+                                    <tag type="COMPATIBILITY" prefix="compatibile con "/>
+                                    <tag type="OPERATING_SYSTEM" prefix="per "/>
+                                    <tag type="NETWORK" prefix="con connessione "/>
+                                </else>
+                            </if:tag:has>
+                            
+                        </then>
+                        
+                        <else>
+                            <if:dst:has key="female.singular">
+                                
+                                <then>
+                                    <if:tag:has type="dst" key="female.singular.split.name">
+                                        <then>
+                                            <tag type="dst" key="female.singular.split.name" />
+                                            
+                                            <tag type="AUX_1" key="female.singular" />
+                                            <tag type="DISPLAY" key="male.singular" />
+                                            <tag type="COUNTRY" key="male.singular" />
+                                            <tag type="SHAPE" key="male.singular" />
+                                            <tag type="MOVEMENT" key="male.singular" />
+                                            <tag type="LOOK" key="female.singular" />
+                                            <if:tag:type type="SUB_COLOR">
+                                                <then>
+                                                    <tag type="SUB_COLOR" key="female.singular" />
+                                                </then>
+                                                <else>
+                                                    <tag type="COLOR" key="female.singular" />
+                                                </else>
+                                            </if:tag:type>
+                                            <tag type="MATERIAL" />
+                                            <tag type="SUB_MATERIAL" />
+                                            <tag type="KARAT_GOLD"  prefix="da " /> 
+                                            <tag type="NICKEL_FREE" />
+                                            <tag type="CASE_GLASS" key="male.singular" /> 
+                                            <tag type="WATERPROOF" key="female.singular" /> 
+                                            <tag type="PATTERN" key="female.singular" />
+                                            <tag type="MOTIVE" key="male.singular" /> 
+                                            <tag type="SIZE" />
+                                            <tag type="BAND_TYPE" key="male.singular" /> 
+                                            
+                                            <tag type="dst" key="female.singular.split.name2" />
+                                            <tag type="WATER_RESISTANCE" prefix="resistenza all'acqua "/>
+                                            <tag type="FEATURE"  prefix="con " />
+                                            <tag type="DISCIPLINE" key="male.singular"/>
+                                            <tag type="CASE_MATERIAL" key="male.singular" prefix="con " />
+                                            <tag type="SCREEN_SIZE" key="male.singular" />
+                                            <tag type="BAND_MATERIAL" key="male.singular" prefix="con " />
+                                            <tag type="FASTENING" key="male.singular" prefix="con " />
+                                            <tag type="FINISH" key="male.singular" prefix="con " />
+                                            <tag type="MEASURES" prefix="con "/>
+                                            <tag type="DIGITS" key="male.singular"/>
+                                            <tag type="AUX_2" key="male.singular" prefix="per " />
+                                            <tag type="OCCASION" prefix="per "/>
+                                            <tag type="SUB_OCCASIONS" prefix="per "/>
+                                            <tag type="EDITION" prefix="edizione "/>
+                                            <tag type="COMPATIBILITY" prefix="compatibile con "/>
+                                            <tag type="OPERATING_SYSTEM" prefix="per "/>
+                                            <tag type="NETWORK" prefix="con connessione "/>
+                                            
+                                        </then>
+                                        <else>
+                                            <tag type="dst" key="female.singular" />
+                                            
+                                            
+                                            <tag type="AUX_1" key="female.singular" />
+                                            <tag type="DISPLAY" key="male.singular" />
+                                            <tag type="COUNTRY" key="male.singular" />
+                                            <tag type="SHAPE" key="male.singular" />
+                                            <tag type="MOVEMENT" key="male.singular" />
+                                            <tag type="LOOK" key="female.singular" />
+                                            <if:tag:type type="SUB_COLOR">
+                                                <then>
+                                                    <tag type="SUB_COLOR" key="female.singular" />
+                                                </then>
+                                                <else>
+                                                    <tag type="COLOR" key="female.singular" />
+                                                </else>
+                                            </if:tag:type>
+                                            <tag type="MATERIAL" />
+                                            <tag type="SUB_MATERIAL" />
+                                            <tag type="KARAT_GOLD"  prefix="da " /> 
+                                            <tag type="NICKEL_FREE" />
+                                            <tag type="CASE_GLASS" key="male.singular" /> 
+                                            <tag type="WATERPROOF" key="female.singular" />
+                                            <tag type="PATTERN" key="female.singular" />
+                                            <tag type="MOTIVE" key="male.singular" /> 
+                                            <tag type="SIZE" />
+                                            
+                                            <tag type="BAND_TYPE" key="male.singular" /> 
+                                            
+                                            <tag type="WATER_RESISTANCE" prefix="resistenza all'acqua "/>
+                                            <tag type="FEATURE" key="male.singular" />
+                                            <tag type="DISCIPLINE" key="male.singular"/>
+                                            <tag type="CASE_MATERIAL" key="male.singular" prefix="con " />
+                                            <tag type="SCREEN_SIZE" key="male.singular" />
+                                            <tag type="BAND_MATERIAL" key="male.singular" prefix="con " />
+                                            <tag type="FASTENING" key="male.singular" prefix="con " />
+                                            <tag type="FINISH" key="male.singular" prefix="con " />
+                                            <tag type="MEASURES" prefix="con "/>
+                                            <tag type="DIGITS" key="male.singular"/>
+                                            <tag type="AUX_2" key="male.singular" prefix="per " />
+                                            <tag type="OCCASION" prefix="per "/>
+                                            <tag type="SUB_OCCASIONS" prefix="per "/>
+                                            <tag type="EDITION" prefix="edizione "/>
+                                            <tag type="COMPATIBILITY" prefix="compatibile con "/>
+                                            <tag type="OPERATING_SYSTEM" prefix="per "/>
+                                            <tag type="NETWORK" prefix="con connessione "/>
+                                        </else>
+                                        
+                                    </if:tag:has>
+                                </then>
+                                
+                                <else>  
+                                    
+                                    
+                                    
+                                    
+                                    <tag type="dst" />
+                                    
+                                    <tag type="AUX_1"/>
+                                    <tag type="DISPLAY" />
+                                    <tag type="COUNTRY"/>
+                                    <tag type="SHAPE"/>
+                                    <tag type="MOVEMENT"/>
+                                    <tag type="LOOK"/>
+                                    <if:tag:type type="SUB_COLOR">
+                                        <then>
+                                            <tag type="SUB_COLOR" key="male.singular" />
+                                        </then>
+                                        <else>
+                                            <tag type="COLOR" key="male.singular" />
+                                        </else>
+                                    </if:tag:type>
+                                    <tag type="MATERIAL" />
+                                    <tag type="SUB_MATERIAL" />
+                                    <tag type="KARAT_GOLD" prefix="da " /> 
+                                    <tag type="NICKEL_FREE" />
+                                    <tag type="CASE_GLASS" /> 
+                                    <tag type="WATERPROOF" /> 
+                                    <tag type="PATTERN" /> 
+                                    <tag type="MOTIVE" /> 
+                                    <tag type="SIZE" />
+                                    <tag type="BAND_TYPE" key="male.singular" /> 
+                                    <tag type="WATER_RESISTANCE" prefix="resistenza all'acqua "/> 
+                                    <tag type="FEATURE"/>
+                                    <tag type="DISCIPLINE"/>
+                                    <tag type="CASE_MATERIAL" prefix="con " />
+                                    <tag type="SCREEN_SIZE"/>
+                                    
+                                    <tag type="BAND_MATERIAL" prefix="con " />
+                                    <tag type="FASTENING" prefix="con " />
+                                    <tag type="FINISH" prefix="con " />
+                                    <tag type="MEASURES" prefix="con "/>
+                                    <tag type="DIGITS" />
+                                    <tag type="AUX_2" prefix="per " />
+                                    <tag type="OCCASION" prefix="per "/>
+                                    <tag type="SUB_OCCASIONS" prefix="per "/>
+                                    <tag type="EDITION" prefix="edizione "/>
+                                    <tag type="COMPATIBILITY" prefix="compatibile con "/>
+                                    <tag type="OPERATING_SYSTEM" prefix="per "/>
+                                    <tag type="NETWORK" prefix="con connessione "/>
+                                    
+                                    
+                                </else> 
+                            </if:dst:has>			
+                        </else>
+                    </if:dst:has> 
+                    
+                    
+                </else> 
+            </if:dst:has>			
+        </else>
+    </if:dst:has>
+    
+    <tag type="BRAND" />
+    <tag type="SERIES" key="brand.overwrite" />
+    <tag type="SUB_SERIES" />
+    <tag type="SUB_SUB_SERIES" />
+    <if:tag:type type="SUB_SUB_MERCHANDISE">
+        
+        <then>
+            
+            <tag type="MERCHANDISE" />
+            
+            <tag type="SUB_SUB_MERCHANDISE" />
+            
+        </then>
+        
+        <else>
+            
+            <if:tag:type type="SUB_MERCHANDISE">
+                
+                <then>
+                    
+                    <tag type="MERCHANDISE" />
+                    
+                    <tag type="SUB_MERCHANDISE" />
+                    
+                </then>
+                
+                <else>
+                    
+                    <tag type="MERCHANDISE" />
+                    
+                </else>
+                
+            </if:tag:type>
+            
+        </else>
+        
+        <else>
+            
+            <tag type="MERCHANDISE" />
+            
+        </else>
+        
+    </if:tag:type>
+    <tag type="SHOP" prefix="di " />
+    <tag type="STORE" prefix="di " />
+    <tag type="SHIPPING_COSTS" prefix="con " />
+</headline:template>

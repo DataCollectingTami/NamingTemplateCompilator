@@ -1,0 +1,433 @@
+<headline:template>
+    
+    <if:param key="FILL-IN">
+        <then>
+            
+            <if:dst:has key="male.plural">
+                <then>
+                    <text value="Altri " />
+                </then>
+                <else>
+                    <if:dst:has key="female.plural">
+                        <then>
+                            <text value="Altre " />
+                        </then>
+                        <else>
+                            <if:dst:has key="female.singular">
+                                <then>
+                                    <text value="Altra " />
+                                </then>
+                                <else>
+                                    <if:dst:has key="male.singular">
+                                        <then>
+                                            <text value="Altro " />
+                                        </then>
+                                        <else>
+                                            <text value="Altri " />
+                                        </else>
+                                    </if:dst:has>
+                                </else>
+                            </if:dst:has>
+                        </else>
+                    </if:dst:has>
+                </else>
+            </if:dst:has>
+            
+        </then>
+    </if:param>
+    
+    
+    
+    
+    
+    <tag type="COUPON" key="static" />
+    
+    
+    <if:dst:has key="male.plural">
+        <then>
+            <if:tag:has type="dst" key="male.plural.split.name">
+                <then>
+                    <tag type="dst" key="male.plural.split.name" />
+                    
+                    <tag type="AUX_1" key="male.plural" />
+                    
+
+                    <if:tag:type type="SUB_COLOR">
+                        <then>
+                            <tag type="SUB_COLOR" key="male.plural" />
+                        </then>
+                        <else>
+                            <tag type="COLOR" key="male.plural" />
+                        </else>
+                    </if:tag:type>
+                    <tag type="FEATURE" key="male.plural" />
+                    <tag type="MATERIAL" />
+                    <tag type="SUB_MATERIAL" />
+                    <tag type="FINISH" prefix="con " />
+                    <tag type="BIO" />
+                    <tag type="WINDPROOF" />
+                    <tag type="WATERPROOF" key="male.plural" /> 
+                    <tag type="PATTERN" key="male.plural" />
+                    <tag type="SIZE" />
+                    <tag type="HARDNESS_LEVEL" key="male.plural" />				
+					<tag type="MOTIVE" prefix="a tema " key="female.singular" />
+                    <tag type="VOLUME" />
+                    <tag type="PEOPLE" prefix="per " />
+                    <tag type="PACKAGE_SIZE" />
+                    
+                    <tag type="dst" key="male.plural.split.name2" />
+                    <tag type="LOOK" key="male.plural"/>
+                    <tag type="AUX_2" key="male.singular" prefix="per " />
+                </then>
+                <else>
+                    <tag type="dst" key="male.plural" />
+                    
+                    <tag type="AUX_1" key="male.plural" />
+                    
+
+                    <if:tag:type type="SUB_COLOR">
+                        <then>
+                            <tag type="SUB_COLOR" key="male.plural" />
+                        </then>
+                        <else>
+                            <tag type="COLOR" key="male.plural" />
+                        </else>
+                    </if:tag:type>
+                    <tag type="FEATURE" key="male.plural" />
+                    <tag type="MATERIAL" />
+                    <tag type="SUB_MATERIAL" />
+                    <tag type="FINISH" prefix="con " />
+                    <tag type="BIO" />
+                    <tag type="WINDPROOF" />
+                    <tag type="WATERPROOF" key="male.plural" /> 
+                    <tag type="PATTERN" key="male.plural" />
+                    <tag type="SIZE" />
+                    <tag type="HARDNESS_LEVEL" key="male.plural" />
+					<tag type="MOTIVE" prefix="a tema " key="female.singular" />
+                    <tag type="VOLUME" />
+                    <tag type="PEOPLE" prefix="per " />
+                    <tag type="PACKAGE_SIZE" />
+                    <tag type="LOOK" key="male.plural" />
+                    <tag type="AUX_2" key="male.singular" prefix="per " />
+                </else>
+            </if:tag:has>
+            
+        </then>
+        
+        <else>
+            <if:dst:has key="female.plural">
+                
+                <then>
+                    <if:tag:has type="dst" key="female.plural.split.name">
+                        <then>
+                            <tag type="dst" key="female.plural.split.name" />
+                            
+                            <tag type="AUX_1" key="female.plural" />
+                            
+
+                            <if:tag:type type="SUB_COLOR">
+                                <then>
+                                    <tag type="SUB_COLOR" key="female.plural" />
+                                </then>
+                                <else>
+                                    <tag type="COLOR" key="female.plural" />
+                                </else>
+                            </if:tag:type>
+                            <tag type="FEATURE" key="female.plural" />
+                            <tag type="MATERIAL" />
+                            <tag type="SUB_MATERIAL" />
+                            <tag type="FINISH" prefix="con " />
+                            <tag type="BIO" />
+                            <tag type="WINDPROOF" />
+                            <tag type="WATERPROOF" key="female.plural" /> 
+                            <tag type="PATTERN" key="female.plural" />
+                            <tag type="SIZE" />
+                            <tag type="HARDNESS_LEVEL" key="female.plural" />
+							<tag type="MOTIVE" prefix="a tema " key="female.singular" />
+                            <tag type="VOLUME" />
+                            <tag type="PEOPLE" prefix="per " />
+                            <tag type="PACKAGE_SIZE" />
+                            <tag type="dst" key="female.plural.split.name2" />
+                            <tag type="LOOK" key="female.plural"/>
+                            <tag type="AUX_2" key="male.singular" prefix="per " />
+                        </then>
+                        <else>
+                            <tag type="dst" key="female.plural" />
+                            
+                            
+                            <tag type="AUX_1" key="female.plural" />
+                            
+
+                            <if:tag:type type="SUB_COLOR">
+                                <then>
+                                    <tag type="SUB_COLOR" key="female.plural" />
+                                </then>
+                                <else>
+                                    <tag type="COLOR" key="female.plural" />
+                                </else>
+                            </if:tag:type>
+                            <tag type="FEATURE" key="female.plural" />
+                            <tag type="MATERIAL" />
+                            <tag type="SUB_MATERIAL" />
+                            <tag type="FINISH" prefix="con " />
+                            <tag type="BIO" />
+                            <tag type="WINDPROOF" />
+                            <tag type="WATERPROOF" key="female.plural" /> 
+                            <tag type="PATTERN" key="female.plural" />
+                            <tag type="SIZE" />
+                            <tag type="HARDNESS_LEVEL" key="female.plural" />
+							<tag type="MOTIVE" prefix="a tema " key="female.singular" />
+                            <tag type="VOLUME" />
+                            <tag type="PEOPLE" prefix="per " />
+                            <tag type="PACKAGE_SIZE" />
+                            <tag type="LOOK" key="female.plural"/>
+                            <tag type="AUX_2" key="male.singular" prefix="per " />
+                        </else>
+                        
+                    </if:tag:has>
+                </then>
+                
+                <else>  
+                    
+                    <if:dst:has key="male.singular">
+                        <then>
+                            <if:tag:has type="dst" key="male.singular.split.name">
+                                <then>
+                                    <tag type="dst" key="male.singular.split.name" />
+                                    
+                                    <tag type="AUX_1" key="male.singular" />
+                                    
+
+                                    <if:tag:type type="SUB_COLOR">
+                                        <then>
+                                            <tag type="SUB_COLOR" key="male.singular" />
+                                        </then>
+                                        <else>
+                                            <tag type="COLOR" key="male.singular" />
+                                        </else>
+                                    </if:tag:type>
+                                    <tag type="FEATURE" key="male.singular" />
+                                    <tag type="MATERIAL" />
+                                    <tag type="SUB_MATERIAL" />
+                                    <tag type="FINISH" prefix="con " />
+                                    <tag type="BIO" />
+                                    <tag type="WINDPROOF" />
+                                    <tag type="WATERPROOF" key="male.singular" /> 
+                                    <tag type="PATTERN" key="male.singular" />
+                                    <tag type="SIZE" />
+                                    <tag type="HARDNESS_LEVEL" key="male.singular" />
+									<tag type="MOTIVE" prefix="a tema " key="female.singular" />
+                                    <tag type="VOLUME" />
+                                    <tag type="PEOPLE" prefix="per " />
+                                    <tag type="PACKAGE_SIZE" />
+                                    <tag type="dst" key="male.singular.split.name2" />
+                                    <tag type="LOOK" key="male.singular" />
+                                    <tag type="AUX_2" key="male.singular" prefix="per " /> 
+                                </then>
+                                <else>
+                                    <tag type="dst" key="male.singular" />
+                                    
+                                    
+                                    <tag type="AUX_1" key="male.singular" />
+                                    
+
+                                    <if:tag:type type="SUB_COLOR">
+                                        <then>
+                                            <tag type="SUB_COLOR" key="male.singular" />
+                                        </then>
+                                        <else>
+                                            <tag type="COLOR" key="male.singular" />
+                                        </else>
+                                    </if:tag:type>
+                                    <tag type="FEATURE" key="male.singular" />
+                                    <tag type="MATERIAL" />
+                                    <tag type="SUB_MATERIAL" />
+                                    <tag type="FINISH" prefix="con " />
+                                    <tag type="BIO" />
+                                    <tag type="WINDPROOF" />
+                                    <tag type="WATERPROOF" key="male.singular" /> 
+                                    <tag type="PATTERN" key="male.singular" />
+                                    <tag type="SIZE" />
+                                    <tag type="HARDNESS_LEVEL" key="male.singular" />
+									<tag type="MOTIVE" prefix="a tema " key="female.singular" />
+                                    <tag type="VOLUME" />
+                                    <tag type="PEOPLE" prefix="per " />
+                                    <tag type="PACKAGE_SIZE" />
+                                    <tag type="LOOK" key="male.singular"/>
+                                    <tag type="AUX_2" key="male.singular" prefix="per " />
+                                </else>
+                            </if:tag:has>
+                            
+                        </then>
+                        
+                        <else>
+                            <if:dst:has key="female.singular">
+                                
+                                <then>
+                                    <if:tag:has type="dst" key="female.singular.split.name">
+                                        <then>
+                                            <tag type="dst" key="female.singular.split.name" />
+                                            
+                                            <tag type="AUX_1" key="female.singular" />
+                                            
+
+                                            <if:tag:type type="SUB_COLOR">
+                                                <then>
+                                                    <tag type="SUB_COLOR" key="female.singular" />
+                                                </then>
+                                                <else>
+                                                    <tag type="COLOR" key="female.singular" />
+                                                </else>
+                                            </if:tag:type>
+                                            <tag type="FEATURE" key="female.singular" />
+                                            <tag type="MATERIAL" />
+                                            <tag type="SUB_MATERIAL" />
+                                           <tag type="FINISH" prefix="con " />
+                                            <tag type="BIO" />
+                                            <tag type="WINDPROOF" />
+                                            <tag type="WATERPROOF" key="female.singular" /> 
+                                            <tag type="PATTERN" key="female.singular" />
+                                            <tag type="SIZE" />
+                                            <tag type="HARDNESS_LEVEL" key="female.singular" />
+											<tag type="MOTIVE" prefix="a tema " key="female.singular" />
+                                            <tag type="VOLUME" />
+                                            <tag type="PEOPLE" prefix="per " />
+                                            <tag type="PACKAGE_SIZE" />
+                                            <tag type="dst" key="female.singular.split.name2" />
+                                            <tag type="LOOK" key="female.singular" />
+                                            <tag type="AUX_2" key="male.singular" prefix="per " />
+                                        </then>
+                                        <else>
+                                            <tag type="dst" key="female.singular" />
+                                            
+                                            
+                                            <tag type="AUX_1" key="female.singular" />
+                                            
+
+                                            <if:tag:type type="SUB_COLOR">
+                                                <then>
+                                                    <tag type="SUB_COLOR" key="female.singular" />
+                                                </then>
+                                                <else>
+                                                    <tag type="COLOR" key="female.singular" />
+                                                </else>
+                                            </if:tag:type>
+                                            <tag type="FEATURE" key="female.singular" />
+                                            <tag type="MATERIAL" />
+                                            <tag type="SUB_MATERIAL" />
+                                            <tag type="FINISH" prefix="con " />
+                                            <tag type="BIO" />
+                                            <tag type="WINDPROOF" />
+                                            <tag type="WATERPROOF" key="female.singular" /> 
+                                            <tag type="PATTERN" key="female.singular" />
+                                            <tag type="SIZE" />
+                                            <tag type="HARDNESS_LEVEL" key="female.singular" />
+											<tag type="MOTIVE" prefix="a tema " key="female.singular" />
+                                            <tag type="VOLUME" />
+                                            <tag type="PEOPLE" prefix="per " />
+                                            <tag type="PACKAGE_SIZE" />
+                                            <tag type="LOOK" key="female.singular"/>
+                                            <tag type="AUX_2" key="male.singular" prefix="per " />			
+                                        </else>
+                                        
+                                    </if:tag:has>
+                                </then>
+                                
+                                <else>  
+                                    
+                                    
+                                    <tag type="dst" />
+                                    <tag type="AUX_1" />
+
+                                    <if:tag:type type="SUB_COLOR">
+                                        <then>
+                                            <tag type="SUB_COLOR"  />
+                                        </then>
+                                        <else>
+                                            <tag type="COLOR" />
+                                        </else>
+                                    </if:tag:type>
+                                    <tag type="FEATURE"  />
+                                    <tag type="MATERIAL" />
+                                    <tag type="SUB_MATERIAL" />
+                                    <tag type="FINISH" prefix="con " />
+                                    <tag type="BIO" />
+                                    <tag type="WINDPROOF" />
+                                    <tag type="WATERPROOF" />
+                                    <tag type="PATTERN"  />
+                                    <tag type="SIZE" />
+                                    <tag type="HARDNESS_LEVEL"  />
+									<tag type="MOTIVE" prefix="a tema " />
+                                    <tag type="VOLUME" />
+                                    <tag type="PEOPLE" prefix="per " />
+                                    <tag type="PACKAGE_SIZE" />
+                                    <tag type="LOOK"/>
+                                    <tag type="AUX_2" prefix="per " />
+                                    
+                                    
+                                    
+                                </else> 
+                            </if:dst:has>			
+                        </else>
+                    </if:dst:has> 
+                    
+                    
+                </else> 
+            </if:dst:has>			
+        </else>
+    </if:dst:has>
+    
+    
+    
+    
+    
+    
+    <tag type="BRAND" />
+    <tag type="SERIES" key="brand.overwrite" />
+    <tag type="SUB_SERIES" />
+    <tag type="SUB_SUB_SERIES" />
+    <if:tag:type type="SUB_SUB_MERCHANDISE">
+        
+        <then>
+            
+            <tag type="MERCHANDISE" />
+            
+            <tag type="SUB_SUB_MERCHANDISE" />
+            
+        </then>
+        
+        <else>
+            
+            <if:tag:type type="SUB_MERCHANDISE">
+                
+                <then>
+                    
+                    <tag type="MERCHANDISE" />
+                    
+                    <tag type="SUB_MERCHANDISE" />
+                    
+                </then>
+                
+                <else>
+                    
+                    <tag type="MERCHANDISE" />
+                    
+                </else>
+                
+            </if:tag:type>
+            
+        </else>
+        
+        <else>
+            
+            <tag type="MERCHANDISE" />
+            
+        </else>
+        
+    </if:tag:type>	
+    <tag type="SHOP" prefix="di " />
+    <tag type="STORE" prefix="di " />
+    <tag type="SHIPPING_COSTS" prefix="con " />
+    
+    
+</headline:template>

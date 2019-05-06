@@ -1,0 +1,461 @@
+<headline:template>
+    <save key="brand" doLoad="false" >
+        <if:tag:has type="SUB_SERIES" key="brand.overwrite">
+            <then>
+                <tag type="SUB_SERIES" key="brand.overwrite" />
+                <tag type="SUB_SUB_SERIES" />
+            </then>
+            <else>
+                <if:tag:has type="SERIES" key="brand.overwrite">
+                    <then>
+                        <tag type="SERIES" key="brand.overwrite" />
+                        <tag type="SUB_SERIES" />
+                        <tag type="SUB_SUB_SERIES" />
+                    </then>
+                    <else>
+                        <tag type="BRAND" />
+                        <tag type="SERIES" />
+                        <tag type="SUB_SERIES" />
+                        <tag type="SUB_SUB_SERIES" />
+                    </else>
+                </if:tag:has>
+            </else>
+        </if:tag:has>
+    </save>
+    <if:param key="FILL-IN">
+        <then>
+            <text value="Más " />
+        </then>
+    </if:param>
+    <if:dst:has key="male.plural">
+        <then>
+            
+            <if:tag:has type="dst" key="male.plural.split.name">
+                <then>
+                    <tag type="dst" key="male.plural.split.name" />
+                    <tag type="AUX_1" key="male.plural" />
+                    <if:tag:type type="SUB_COLOR">
+                        <then>
+                            <tag type="SUB_COLOR" key="male.plural" />
+                        </then>
+                        <else>
+                            <tag type="COLOR" key="male.plural" />
+                        </else>
+                    </if:tag:type>
+                    <tag type="MATERIAL" prefix="de " />
+                    <tag type="SUB_MATERIAL" prefix="de " />
+                    <if:tag:type type="SUB_SUB_MERCHANDISE">
+                        <then>
+                            <tag type="MERCHANDISE" />
+                            <tag type="SUB_SUB_MERCHANDISE" />
+                        </then>
+                        <else>
+                            <if:tag:type type="SUB_MERCHANDISE">
+                                <then>
+                                    <tag type="MERCHANDISE" />
+                                    <tag type="SUB_MERCHANDISE" />
+                                </then>
+                                <else>
+                                    <tag type="MERCHANDISE" />
+                                </else>
+                            </if:tag:type>
+                        </else>
+                        <else>
+                            <tag type="MERCHANDISE" />
+                        </else>
+                    </if:tag:type>
+                    <tag type="dst" key="male.plural.split.name2" />
+                </then>
+                <else>
+                    <tag type="dst" key="male.plural" />
+                    <tag type="AUX_1" key="male.plural" />
+                    <if:tag:type type="SUB_COLOR">
+                        <then>
+                            <tag type="SUB_COLOR" key="male.plural" />
+                        </then>
+                        <else>
+                            <tag type="COLOR" key="male.plural" />
+                        </else>
+                    </if:tag:type>
+                    <tag type="MATERIAL" prefix="de " />
+                    <tag type="SUB_MATERIAL" prefix="de " />	
+                    <if:tag:type type="SUB_SUB_MERCHANDISE">
+                        <then>
+                            <tag type="MERCHANDISE" />
+                            <tag type="SUB_SUB_MERCHANDISE" />
+                        </then>
+                        <else>
+                            <if:tag:type type="SUB_MERCHANDISE">
+                                <then>
+                                    <tag type="MERCHANDISE" />
+                                    <tag type="SUB_MERCHANDISE" />
+                                </then>
+                                <else>
+                                    <tag type="MERCHANDISE" />
+                                </else>
+                            </if:tag:type>
+                        </else>
+                        <else>
+                            <tag type="MERCHANDISE" />
+                        </else>
+                    </if:tag:type>
+                </else>
+            </if:tag:has>
+			<tag type="YEAR" prefix="de " />
+            <tag type="OCCASION" prefix="para " key="male.plural" />
+            <tag type="SUB_OCCASIONS" key="male.plural" />
+            <tag type="SIZE" prefix="talla " />
+            <tag type="PATTERN" key="male.plural" />
+            <tag type="LOOK" key="male.plural" />
+			<tag type="CASE_TYPE" key="male.plural" />
+			    <tag type="FINISH" key="male.plural" />
+			    <tag type="FEATURE" key="male.plural" />
+            <tag type="VOLUME" key="male.plural" />
+            <load key="brand" />
+			<tag type="MOTIVE"  key="male.plural" prefix="con motivo de " />
+			<tag type="PACKAGE_SIZE" key="male.plural" prefix="en pack de " />
+            <tag type="SHIPPING_COSTS" key="male.plural" prefix="con " />
+            <tag type="AUX_5" key="male.plural" />
+            <tag type="SHOP" prefix="en " />
+            <tag type="STORE" prefix="en " />
+        </then>
+        <else>
+            <if:dst:has key="female.plural">
+                <then>
+                    <if:tag:has type="dst" key="female.plural.split.name">
+                        <then>
+                            <tag type="dst" key="female.plural.split.name" />
+                            <tag type="AUX_1" key="female.plural" />
+                            <if:tag:type type="SUB_COLOR">
+                                <then>
+                                    <tag type="SUB_COLOR" key="female.plural" />
+                                </then>
+                                <else>
+                                    <tag type="COLOR" key="female.plural" />
+                                </else>
+                            </if:tag:type>
+                            <tag type="MATERIAL" prefix="de " />
+                            <tag type="SUB_MATERIAL" prefix="de " />
+                            <if:tag:type type="SUB_SUB_MERCHANDISE">
+                                <then>
+                                    <tag type="MERCHANDISE" />
+                                    <tag type="SUB_SUB_MERCHANDISE" />
+                                </then>
+                                <else>
+                                    <if:tag:type type="SUB_MERCHANDISE">
+                                        <then>
+                                            <tag type="MERCHANDISE" />
+                                            <tag type="SUB_MERCHANDISE" />
+                                        </then>
+                                        <else>
+                                            <tag type="MERCHANDISE" />
+                                        </else>
+                                    </if:tag:type>
+                                </else>
+                                <else>
+                                    <tag type="MERCHANDISE" />
+                                </else>
+                            </if:tag:type>
+                            <tag type="dst" key="female.plural.split.name2" />
+                        </then>
+                        <else>
+                            <tag type="dst" key="female.plural" />
+                            <tag type="AUX_1" key="female.plural" />
+                            <if:tag:type type="SUB_COLOR">
+                                <then>
+                                    <tag type="SUB_COLOR" key="female.plural" />
+                                </then>
+                                <else>
+                                    <tag type="COLOR" key="female.plural" />
+                                </else>
+                            </if:tag:type>
+                            <tag type="MATERIAL" prefix="de " />
+                            <tag type="SUB_MATERIAL" prefix="de " />	
+                            <if:tag:type type="SUB_SUB_MERCHANDISE">
+                                <then>
+                                    <tag type="MERCHANDISE" />
+                                    <tag type="SUB_SUB_MERCHANDISE" />
+                                </then>
+                                <else>
+                                    <if:tag:type type="SUB_MERCHANDISE">
+                                        <then>
+                                            <tag type="MERCHANDISE" />
+                                            <tag type="SUB_MERCHANDISE" />
+                                        </then>
+                                        <else>
+                                            <tag type="MERCHANDISE" />
+                                        </else>
+                                    </if:tag:type>
+                                </else>
+                                <else>
+                                    <tag type="MERCHANDISE" />
+                                </else>
+                            </if:tag:type>
+                        </else>
+                    </if:tag:has>
+					<tag type="YEAR" prefix="de " />
+                    <tag type="OCCASION" prefix="para " key="female.plural" />
+                    <tag type="SUB_OCCASIONS" key="female.plural" />
+                    <tag type="SIZE" prefix="talla " />
+                    <tag type="PATTERN" key="female.plural" />
+                    <tag type="LOOK" key="female.plural" />
+					<tag type="CASE_TYPE" key="female.plural" />
+			    <tag type="FINISH" key="female.plural" />
+			    <tag type="FEATURE" key="female.plural" />
+                    <tag type="VOLUME" key="female.plural" />
+                    <load key="brand" />
+					<tag type="MOTIVE"  key="female.plural" prefix="con motivo de " />
+					<tag type="PACKAGE_SIZE" key="female.plural" prefix="en pack de " />
+                    <tag type="SHIPPING_COSTS" key="female.plural" prefix="con " />
+                    <tag type="AUX_5" key="female.plural" />
+                    <tag type="SHOP" prefix="en " />
+                    <tag type="STORE" prefix="en " />
+                </then>
+                <else>
+                    <if:dst:has key="male.singular">
+                        <then>
+                            
+                            <if:tag:has type="dst" key="male.singular.split.name">
+                                <then>
+                                    <tag type="dst" key="male.singular.split.name" />
+                                    <tag type="AUX_1" key="male.singular" />
+                                    <if:tag:type type="SUB_COLOR">
+                                        <then>
+                                            <tag type="SUB_COLOR" key="male.singular" />
+                                        </then>
+                                        <else>
+                                            <tag type="COLOR" key="male.singular" />
+                                        </else>
+                                    </if:tag:type>
+                                    <tag type="MATERIAL" prefix="de " />
+                                    <tag type="SUB_MATERIAL" prefix="de " />
+                                    <if:tag:type type="SUB_SUB_MERCHANDISE">
+                                        <then>
+                                            <tag type="MERCHANDISE" />
+                                            <tag type="SUB_SUB_MERCHANDISE" />
+                                        </then>
+                                        <else>
+                                            <if:tag:type type="SUB_MERCHANDISE">
+                                                <then>
+                                                    <tag type="MERCHANDISE" />
+                                                    <tag type="SUB_MERCHANDISE" />
+                                                </then>
+                                                <else>
+                                                    <tag type="MERCHANDISE" />
+                                                </else>
+                                            </if:tag:type>
+                                        </else>
+                                        <else>
+                                            <tag type="MERCHANDISE" />
+                                        </else>
+                                    </if:tag:type>
+                                    <tag type="dst" key="male.singular.split.name2" />
+                                </then>
+                                <else>
+                                    <tag type="dst" key="male.singular" />
+                                    <tag type="AUX_1" key="male.singular" />
+                                    <if:tag:type type="SUB_COLOR">
+                                        <then>
+                                            <tag type="SUB_COLOR" key="male.singular" />
+                                        </then>
+                                        <else>
+                                            <tag type="COLOR" key="male.singular" />
+                                        </else>
+                                    </if:tag:type>
+                                    <tag type="MATERIAL" prefix="de " />
+                                    <tag type="SUB_MATERIAL" prefix="de " />	
+                                    <if:tag:type type="SUB_SUB_MERCHANDISE">
+                                        <then>
+                                            <tag type="MERCHANDISE" />
+                                            <tag type="SUB_SUB_MERCHANDISE" />
+                                        </then>
+                                        <else>
+                                            <if:tag:type type="SUB_MERCHANDISE">
+                                                <then>
+                                                    <tag type="MERCHANDISE" />
+                                                    <tag type="SUB_MERCHANDISE" />
+                                                </then>
+                                                <else>
+                                                    <tag type="MERCHANDISE" />
+                                                </else>
+                                            </if:tag:type>
+                                        </else>
+                                        <else>
+                                            <tag type="MERCHANDISE" />
+                                        </else>
+                                    </if:tag:type>
+                                </else>
+                            </if:tag:has>
+							<tag type="YEAR" prefix="de " />
+                            <tag type="OCCASION" prefix="para " key="male.singular" />
+                            <tag type="SUB_OCCASIONS" key="male.singular" />
+                            <tag type="SIZE" prefix="talla " />
+                            <tag type="PATTERN" key="male.singular" />
+                            <tag type="LOOK" key="male.singular" />
+							<tag type="CASE_TYPE" key="male.singular" />
+			    <tag type="FINISH" key="male.singular" />
+			    <tag type="FEATURE" key="male.singular" />
+                            <tag type="VOLUME" key="male.singular" />
+                            <load key="brand" />
+							<tag type="MOTIVE"  key="male.singular" prefix="con motivo de " />
+							<tag type="PACKAGE_SIZE" key="male.singular" prefix="en pack de " />
+                            <tag type="SHIPPING_COSTS" key="male.singular" prefix="con " />
+                            <tag type="AUX_5" key="male.singular" />
+                            <tag type="SHOP" prefix="en " />
+                            <tag type="STORE" prefix="en " />
+                        </then>
+                        <else>
+                            <if:dst:has key="female.singular">
+                                <then>
+                                    
+                                    <if:tag:has type="dst" key="female.singular.split.name">
+                                        <then>
+                                            <tag type="dst" key="female.singular.split.name" />
+                                            <tag type="AUX_1" key="female.singular" />
+                                            <if:tag:type type="SUB_COLOR">
+                                                <then>
+                                                    <tag type="SUB_COLOR" key="female.singular" />
+                                                </then>
+                                                <else>
+                                                    <tag type="COLOR" key="female.singular" />
+                                                </else>
+                                            </if:tag:type>
+                                            <tag type="MATERIAL" prefix="de " />
+                                            <tag type="SUB_MATERIAL" prefix="de " />
+                                            <if:tag:type type="SUB_SUB_MERCHANDISE">
+                                                <then>
+                                                    <tag type="MERCHANDISE" />
+                                                    <tag type="SUB_SUB_MERCHANDISE" />
+                                                </then>
+                                                <else>
+                                                    <if:tag:type type="SUB_MERCHANDISE">
+                                                        <then>
+                                                            <tag type="MERCHANDISE" />
+                                                            <tag type="SUB_MERCHANDISE" />
+                                                        </then>
+                                                        <else>
+                                                            <tag type="MERCHANDISE" />
+                                                        </else>
+                                                    </if:tag:type>
+                                                </else>
+                                                <else>
+                                                    <tag type="MERCHANDISE" />
+                                                </else>
+                                            </if:tag:type>
+                                            <tag type="dst" key="female.singular.split.name2" />
+                                        </then>
+                                        <else>
+                                            <tag type="dst" key="female.singular" />
+                                            <tag type="AUX_1" key="female.singular" />
+                                            <if:tag:type type="SUB_COLOR">
+                                                <then>
+                                                    <tag type="SUB_COLOR" key="female.singular" />
+                                                </then>
+                                                <else>
+                                                    <tag type="COLOR" key="female.singular" />
+                                                </else>
+                                            </if:tag:type>
+                                            <tag type="MATERIAL" prefix="de " />
+                                            <tag type="SUB_MATERIAL" prefix="de " />	
+                                            <if:tag:type type="SUB_SUB_MERCHANDISE">
+                                                <then>
+                                                    <tag type="MERCHANDISE" />
+                                                    <tag type="SUB_SUB_MERCHANDISE" />
+                                                </then>
+                                                <else>
+                                                    <if:tag:type type="SUB_MERCHANDISE">
+                                                        <then>
+                                                            <tag type="MERCHANDISE" />
+                                                            <tag type="SUB_MERCHANDISE" />
+                                                        </then>
+                                                        <else>
+                                                            <tag type="MERCHANDISE" />
+                                                        </else>
+                                                    </if:tag:type>
+                                                </else>
+                                                <else>
+                                                    <tag type="MERCHANDISE" />
+                                                </else>
+                                            </if:tag:type>
+                                        </else>
+                                    </if:tag:has>
+									<tag type="YEAR" prefix="de " />
+                                    <tag type="OCCASION" prefix="para " key="female.singular" />
+                                    <tag type="SUB_OCCASIONS" key="female.singular" />
+                                    <tag type="SIZE" prefix="talla " />
+                                    <tag type="PATTERN" key="female.singular" />
+                                    <tag type="LOOK" key="female.singular" />
+									<tag type="CASE_TYPE" key="female.singular" />
+			    <tag type="FINISH" key="female.singular" />
+			    <tag type="FEATURE" key="female.singular" />
+                                    <tag type="VOLUME" key="female.singular" />
+                                    <load key="brand" />
+									<tag type="MOTIVE"  key="female.singular" prefix="con motivo de " />
+									<tag type="PACKAGE_SIZE" key="female.singular" prefix="en pack de " />
+                                    <tag type="SHIPPING_COSTS" key="female.singular" prefix="con " />
+                                    <tag type="AUX_5" key="female.singular" />
+                                    <tag type="SHOP" prefix="en " />
+                                    <tag type="STORE" prefix="en " />
+                                </then>
+                                <else>
+                                    <tag type="dst" />
+                                    <if:tag:type type="SUB_SUB_MERCHANDISE">
+                                        <then>
+                                            <tag type="MERCHANDISE" />
+                                            <tag type="SUB_SUB_MERCHANDISE" />
+                                        </then>
+                                        <else>
+                                            <if:tag:type type="SUB_MERCHANDISE">
+                                                <then>
+                                                    <tag type="MERCHANDISE" />
+                                                    <tag type="SUB_MERCHANDISE" />
+                                                </then>
+                                                <else>
+                                                    <tag type="MERCHANDISE" />
+                                                </else>
+                                            </if:tag:type>
+                                        </else>
+                                        <else>
+                                            <tag type="MERCHANDISE" />
+                                        </else>
+                                    </if:tag:type>
+									<tag type="YEAR" prefix="de " />
+                                    <tag type="BIO" />
+                                    <tag type="MATERIAL" prefix="de " />
+                                    <tag type="SUB_MATERIAL" prefix="de " />
+                                    <tag type="AUX_5" />                                    
+                                    <tag type="LOOK" />
+									<tag type="CASE_TYPE"  />
+									<tag type="FINISH"  />
+									<tag type="FEATURE"  />
+									
+                                    <if:tag:type type="SUB_COLOR">
+                                        <then>
+                                            <tag type="SUB_COLOR" />
+                                        </then>
+                                        <else>
+                                            <tag type="COLOR" />
+                                        </else>
+                                    </if:tag:type>
+									<tag type="YEAR" prefix="de " />
+                                    <tag type="OCCASION" prefix="para " />
+                                    <tag type="SUB_OCCASIONS" />
+                                    <tag type="SIZE" prefix="talla " />
+                                    <tag type="VOLUME" prefix="de " />
+                                    <tag type="PATTERN" />
+                                    <load key="brand" />
+                                    <tag type="SHOP" prefix="en " />
+                                    <tag type="STORE" prefix="en " />
+                                    <tag type="AUX_1" />
+                                    <tag type="SHIPPING_COSTS" prefix="con " />
+                                </else>
+                            </if:dst:has>
+                        </else>
+                    </if:dst:has>
+                </else>
+            </if:dst:has>
+        </else>
+    </if:dst:has>
+    <tag type="COUPON" key="static" suffix="descuento " />
+    <tag type="AGE" key="static" />
+</headline:template>

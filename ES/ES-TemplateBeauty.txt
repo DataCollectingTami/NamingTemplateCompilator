@@ -1,0 +1,718 @@
+<headline:template>
+    <save key="brand" doLoad="false" >
+        <if:tag:has type="SUB_SERIES" key="brand.overwrite">
+            <then>
+                <tag type="SUB_SERIES" key="brand.overwrite" />
+                <tag type="SUB_SUB_SERIES" />
+            </then>
+            <else>
+                <if:tag:has type="SERIES" key="brand.overwrite">
+                    <then>
+                        <tag type="SERIES" key="brand.overwrite" />
+                        <tag type="SUB_SERIES" />
+                        <tag type="SUB_SUB_SERIES" />
+                    </then>
+                    <else>
+                        <tag type="BRAND" />
+                        <tag type="SERIES" />
+                        <tag type="SUB_SERIES" />
+                        <tag type="SUB_SUB_SERIES" />
+                    </else>
+                </if:tag:has>
+            </else>
+        </if:tag:has>
+    </save>
+    <if:param key="FILL-IN">
+        <then>
+            <text value="Más " />
+        </then>
+    </if:param>
+    <if:dst:has key="male.plural">
+        <then>
+            <if:tag:has type="dst" key="male.plural.split.name">
+                <then>
+                    <tag type="dst" key="male.plural.split.name" />
+                    <tag type="AUX_1" key="male.plural" />
+					
+                    <tag type="ALUMINIUM_FREE" key="male.plural" />
+                    <tag type="ALCOHOL_FREE" key="male.plural" />
+                    <tag type="FRAGRANCE_FREE" key="male.plural" />
+                    <tag type="SILICONE_FREE" key="male.plural" />
+                    <tag type="PARABEN_FREE" key="male.plural" />
+                    <tag type="BIO" key="male.plural" />
+                    <if:tag:type type="SUB_COLOR">
+                        <then>
+                            <tag type="SUB_COLOR" key="male.plural" />
+                        </then>
+                        <else>
+                            <tag type="COLOR" key="male.plural" />
+                        </else>
+                    </if:tag:type>
+                     <tag type="MATERIAL" prefix="de " />
+                    <tag type="SUB_MATERIAL" prefix="de " />
+					<tag type="NATURAL" key="male.plural" />
+					<tag type="VEGY_VEGAN" key="male.plural" />
+					<tag type="DURATION" key="male.plural" />				
+					<tag type="HYPOALLERGENIC" key="male.plural" />	
+					<tag type="FEATURE" key="male.plural" />
+					<tag type="FINISH" key="male.plural" />
+					<tag type="SUPPORT_LEVEL" key="male.plural" />
+					<tag type="CONCERN" key="male.plural" />
+					<tag type="BENEFIT" key="male.plural" />
+					<tag type="HANDMADE" key="male.plural" />
+					<tag type="SPECIAL_SIZE" key="male.plural" />
+					<tag type="INGREDIENTS" key="male.plural" prefix="con  " />
+					<tag type="UV_PROTECTION" key="male.plural" prefix="con  " />
+					<tag type="FREE_FROM" key="male.plural" />
+					<tag type="COVERAGE" key="male.plural" />
+					<tag type="BODY_AREA" key="male.plural" />
+					<tag type="SKIN_TONE" key="male.plural" />
+					<tag type="SKIN_SHADE" key="male.plural" />
+					<tag type="CRUELTY_FREE" key="male.plural" />
+					<tag type="GIFT_SETS" key="male.plural" />
+					<tag type="MATERNITY" key="male.plural" />
+					<tag type="COUNTRY" key="male.plural" />
+					<tag type="EDITION" key="male.plural" />
+					<tag type="HAIR_TYPE" key="male.plural" prefix="para  " />
+					<tag type="HAIR_COLOR" key="male.plural" />
+                    <if:tag:type type="SUB_SUB_MERCHANDISE">
+               <then>
+                   <tag type="MERCHANDISE" />
+                   <tag type="SUB_SUB_MERCHANDISE" />
+               </then>
+               <else>
+                   <if:tag:type type="SUB_MERCHANDISE">
+                       <then>
+                           <tag type="MERCHANDISE" />
+                           <tag type="SUB_MERCHANDISE" />
+                       </then>
+                       <else>
+                           <tag type="MERCHANDISE" />
+                       </else>
+                   </if:tag:type>
+               </else>
+               <else>
+                   <tag type="MERCHANDISE" />
+               </else>
+           </if:tag:type>
+                    <tag type="dst" key="male.plural.split.name2" />
+                </then>
+                <else>
+                    <tag type="dst" key="male.plural" />
+                    <tag type="AUX_1" key="male.plural" />
+					
+                    <tag type="ALUMINIUM_FREE" key="male.plural" />
+                    <tag type="ALCOHOL_FREE" key="male.plural" />
+                    <tag type="FRAGRANCE_FREE" key="male.plural" />
+                    <tag type="SILICONE_FREE" key="male.plural" />
+                    <tag type="PARABEN_FREE" key="male.plural" />
+                    <tag type="BIO" key="male.plural" />
+                    <if:tag:type type="SUB_COLOR">
+                        <then>
+                            <tag type="SUB_COLOR" key="male.plural" />
+                        </then>
+                        <else>
+                            <tag type="COLOR" key="male.plural" />
+                        </else>
+                    </if:tag:type>
+                   <tag type="MATERIAL" prefix="de " />
+                    <tag type="SUB_MATERIAL" prefix="de " />
+					<tag type="NATURAL" key="male.plural" />
+					<tag type="VEGY_VEGAN" key="male.plural" />
+					<tag type="DURATION" key="male.plural" />				
+					<tag type="HYPOALLERGENIC" key="male.plural" />	
+					<tag type="FEATURE" key="male.plural" />
+					<tag type="FINISH" key="male.plural" />
+					<tag type="SUPPORT_LEVEL" key="male.plural" />
+					<tag type="CONCERN" key="male.plural" />
+					<tag type="BENEFIT" key="male.plural" />
+					<tag type="HANDMADE" key="male.plural" />
+					<tag type="SPECIAL_SIZE" key="male.plural" />
+					<tag type="INGREDIENTS" key="male.plural" prefix="con  " />
+					<tag type="UV_PROTECTION" key="male.plural" prefix="con  " />
+					<tag type="FREE_FROM" key="male.plural" />
+					<tag type="COVERAGE" key="male.plural" />
+					<tag type="BODY_AREA" key="male.plural" />
+					<tag type="SKIN_TONE" key="male.plural" />
+					<tag type="SKIN_SHADE" key="male.plural" />
+					<tag type="CRUELTY_FREE" key="male.plural" />
+					<tag type="GIFT_SETS" key="male.plural" />
+					<tag type="MATERNITY" key="male.plural" />
+					<tag type="COUNTRY" key="male.plural" />
+					<tag type="EDITION" key="male.plural" />
+					<tag type="HAIR_TYPE" key="male.plural" prefix="para  " />
+					<tag type="HAIR_COLOR" key="male.plural" />
+                   <if:tag:type type="SUB_SUB_MERCHANDISE">
+               <then>
+                   <tag type="MERCHANDISE" />
+                   <tag type="SUB_SUB_MERCHANDISE" />
+               </then>
+               <else>
+                   <if:tag:type type="SUB_MERCHANDISE">
+                       <then>
+                           <tag type="MERCHANDISE" />
+                           <tag type="SUB_MERCHANDISE" />
+                       </then>
+                       <else>
+                           <tag type="MERCHANDISE" />
+                       </else>
+                   </if:tag:type>
+               </else>
+               <else>
+                   <tag type="MERCHANDISE" />
+               </else>
+           </if:tag:type>
+                </else>
+            </if:tag:has>
+            <tag type="SIZE" prefix="de " />
+            <tag type="VOLUME" prefix="de " />
+			<tag type="FRAGRANCE" key="male.plural" prefix="con aroma " />
+            <tag type="PATTERN" key="male.plural" />
+            <tag type="LOOK" key="male.plural" prefix="look " />
+            <load key="brand" />
+            <tag type="SHIPPING_COSTS" key="male.plural" prefix="con " />
+            <tag type="AUX_5" key="male.plural" /> 
+            <tag type="SHOP" prefix="en " />
+            <tag type="STORE" prefix="en " />
+            
+        </then>
+        
+        <else>
+            <if:dst:has key="female.plural">
+                <then>
+                    <if:tag:has type="dst" key="female.plural.split.name">
+                        <then>
+                            <tag type="dst" key="female.plural.split.name" />
+                            <tag type="AUX_1" key="female.plural" />
+							
+                            <tag type="ALUMINIUM_FREE" key="female.plural" />
+                            <tag type="ALCOHOL_FREE" key="female.plural" />
+                            <tag type="FRAGRANCE_FREE" key="female.plural" />
+                            <tag type="SILICONE_FREE" key="female.plural" />
+                            <tag type="PARABEN_FREE" key="female.plural" />
+                            <tag type="BIO" key="female.plural" />
+                            <if:tag:type type="SUB_COLOR">
+                                <then>
+                                    <tag type="SUB_COLOR" key="female.plural" />
+                                </then>
+                                <else>
+                                    <tag type="COLOR" key="female.plural" />
+                                </else>
+                            </if:tag:type>
+                             <tag type="MATERIAL" prefix="de " />
+                              <tag type="SUB_MATERIAL" prefix="de " />
+					          <tag type="NATURAL" key="female.plural" />
+					          <tag type="VEGY_VEGAN" key="female.plural" />
+				              <tag type="DURATION" key="female.plural" />				
+					          <tag type="HYPOALLERGENIC" key="female.plural" />	
+					          <tag type="FEATURE" key="female.plural" />
+					          <tag type="FINISH" key="female.plural" />
+					          <tag type="SUPPORT_LEVEL" key="female.plural" />
+					          <tag type="CONCERN" key="female.plural" />
+					          <tag type="BENEFIT" key="female.plural" />
+					          <tag type="HANDMADE" key="female.plural" />
+					          <tag type="SPECIAL_SIZE" key="female.plural" />
+					          <tag type="INGREDIENTS" key="female.plural" prefix="con  " />  
+  					          <tag type="UV_PROTECTION" key="female.plural" prefix="con  " />
+					          <tag type="FREE_FROM" key="female.plural" />
+					          <tag type="COVERAGE" key="female.plural" />
+					          <tag type="BODY_AREA" key="female.plural" />
+					          <tag type="SKIN_TONE" key="female.plural" />
+					          <tag type="SKIN_SHADE" key="female.plural" />
+					          <tag type="CRUELTY_FREE" key="female.plural" />
+					          <tag type="GIFT_SETS" key="female.plural" />
+					          <tag type="MATERNITY" key="female.plural" />
+					          <tag type="COUNTRY" key="female.plural" />
+					          <tag type="EDITION" key="female.plural" />
+					          <tag type="HAIR_TYPE" key="female.plural" prefix="para  " />
+					          <tag type="HAIR_COLOR" key="female.plural" />
+                           <if:tag:type type="SUB_SUB_MERCHANDISE">
+               <then>
+                   <tag type="MERCHANDISE" />
+                   <tag type="SUB_SUB_MERCHANDISE" />
+               </then>
+               <else>
+                   <if:tag:type type="SUB_MERCHANDISE">
+                       <then>
+                           <tag type="MERCHANDISE" />
+                           <tag type="SUB_MERCHANDISE" />
+                       </then>
+                       <else>
+                           <tag type="MERCHANDISE" />
+                       </else>
+                   </if:tag:type>
+               </else>
+               <else>
+                   <tag type="MERCHANDISE" />
+               </else>
+           </if:tag:type>
+                            <tag type="dst" key="female.plural.split.name2" />
+                        </then>
+                        <else>
+                            <tag type="dst" key="female.plural" />
+                            <tag type="AUX_1" key="female.plural" />
+							
+                            <tag type="ALUMINIUM_FREE" key="female.plural" />
+                            <tag type="ALCOHOL_FREE" key="female.plural" />
+                            <tag type="FRAGRANCE_FREE" key="female.plural" />
+                            <tag type="SILICONE_FREE" key="female.plural" />
+                            <tag type="PARABEN_FREE" key="female.plural" />
+                            <tag type="BIO" key="female.plural" />
+                            <if:tag:type type="SUB_COLOR">
+                                <then>
+                                    <tag type="SUB_COLOR" key="female.plural" />
+                                </then>
+                                <else>
+                                    <tag type="COLOR" key="female.plural" />
+                                </else>
+                            </if:tag:type>
+                              <tag type="MATERIAL" prefix="de " />
+                              <tag type="SUB_MATERIAL" prefix="de " />
+					          <tag type="NATURAL" key="female.plural" />
+					          <tag type="VEGY_VEGAN" key="female.plural" />
+				              <tag type="DURATION" key="female.plural" />				
+					          <tag type="HYPOALLERGENIC" key="female.plural" />	
+					          <tag type="FEATURE" key="female.plural" />
+					          <tag type="FINISH" key="female.plural" />
+					          <tag type="SUPPORT_LEVEL" key="female.plural" />
+					          <tag type="CONCERN" key="female.plural" />
+					          <tag type="BENEFIT" key="female.plural" />
+					          <tag type="HANDMADE" key="female.plural" />
+					          <tag type="SPECIAL_SIZE" key="female.plural" />
+					          <tag type="INGREDIENTS" key="female.plural" prefix="con  " />  
+  					          <tag type="UV_PROTECTION" key="female.plural" prefix="con  " />
+					          <tag type="FREE_FROM" key="female.plural" />
+					          <tag type="COVERAGE" key="female.plural" />
+					          <tag type="BODY_AREA" key="female.plural" />
+					          <tag type="SKIN_TONE" key="female.plural" />
+					          <tag type="SKIN_SHADE" key="female.plural" />
+					          <tag type="CRUELTY_FREE" key="female.plural" />
+					          <tag type="GIFT_SETS" key="female.plural" />
+					          <tag type="MATERNITY" key="female.plural" />
+					          <tag type="COUNTRY" key="female.plural" />
+					          <tag type="EDITION" key="female.plural" />
+					          <tag type="HAIR_TYPE" key="female.plural" prefix="para  " />
+					          <tag type="HAIR_COLOR" key="female.plural" />
+                            <if:tag:type type="SUB_SUB_MERCHANDISE">
+               <then>
+                   <tag type="MERCHANDISE" />
+                   <tag type="SUB_SUB_MERCHANDISE" />
+               </then>
+               <else>
+                   <if:tag:type type="SUB_MERCHANDISE">
+                       <then>
+                           <tag type="MERCHANDISE" />
+                           <tag type="SUB_MERCHANDISE" />
+                       </then>
+                       <else>
+                           <tag type="MERCHANDISE" />
+                       </else>
+                   </if:tag:type>
+               </else>
+               <else>
+                   <tag type="MERCHANDISE" />
+               </else>
+           </if:tag:type>
+                        </else>
+                    </if:tag:has>
+                    <tag type="SIZE" prefix="de " />
+                    <tag type="VOLUME" prefix="de " />
+					<tag type="FRAGRANCE" key="female.plural" prefix="con aroma " />
+                    <tag type="PATTERN" key="female.plural" />
+                    <tag type="LOOK" key="female.plural" prefix="look " />
+                    <load key="brand" />
+                    <tag type="SHIPPING_COSTS" key="female.plural" prefix="con " />
+                    <tag type="AUX_5" key="female.plural" /> 
+                    <tag type="SHOP" prefix="en " />
+                    <tag type="STORE" prefix="en " />
+                </then>
+                <else>
+                    <if:dst:has key="male.singular">
+                        <then>
+                            <if:tag:has type="dst" key="male.singular.split.name">
+                                <then>
+                                    <tag type="dst" key="male.singular.split.name" />
+                                    <tag type="AUX_1" key="male.singular" />
+									
+                                    <tag type="ALUMINIUM_FREE" key="male.singular" />
+                                    <tag type="ALCOHOL_FREE" key="male.singular" />
+                                    <tag type="FRAGRANCE_FREE" key="male.singular" />
+                                    <tag type="SILICONE_FREE" key="male.singular" />
+                                    <tag type="PARABEN_FREE" key="male.singular" />
+                                    <tag type="BIO" key="male.singular" />
+                                    <if:tag:type type="SUB_COLOR">
+                                        <then>
+                                            <tag type="SUB_COLOR" key="male.singular" />
+                                        </then>
+                                        <else>
+                                            <tag type="COLOR" key="male.singular" />
+                                        </else>
+                                    </if:tag:type>
+                                    <tag type="MATERIAL" prefix="de " />
+                                       <tag type="SUB_MATERIAL" prefix="de " />
+				                       <tag type="NATURAL" key="male.singular" />
+					                   <tag type="VEGY_VEGAN" key="male.singular" />
+					                   <tag type="DURATION" key="male.singular" />				
+					                   <tag type="HYPOALLERGENIC" key="male.singular" />	
+					                   <tag type="FEATURE" key="male.singular" />
+					                   <tag type="FINISH" key="male.singular" />
+					                   <tag type="SUPPORT_LEVEL" key="male.singular" />
+					                   <tag type="CONCERN" key="male.singular" />
+					                   <tag type="BENEFIT" key="male.singular" />
+					                   <tag type="HANDMADE" key="male.singular" />
+					                   <tag type="SPECIAL_SIZE" key="male.singular" />
+					                   <tag type="INGREDIENTS" key="male.singular" prefix="con  " />  
+                                       <tag type="UV_PROTECTION" key="male.singular" prefix="con  " />  					
+					                   <tag type="FREE_FROM" key="male.singular" />
+					                   <tag type="COVERAGE" key="male.singular" />
+					                   <tag type="BODY_AREA" key="male.singular" />
+					                   <tag type="SKIN_TONE" key="male.singular" />
+					                   <tag type="SKIN_SHADE" key="male.singular" />
+					                   <tag type="CRUELTY_FREE" key="male.singular" />
+					                   <tag type="GIFT_SETS" key="male.singular" />
+					                   <tag type="MATERNITY" key="male.singular" />
+					                   <tag type="COUNTRY" key="male.singular" />
+					                   <tag type="EDITION" key="male.singular" />
+					                   <tag type="HAIR_TYPE" key="male.singular" prefix="para  " />
+					                   <tag type="HAIR_COLOR" key="male.singular" />
+                                    <if:tag:type type="SUB_SUB_MERCHANDISE">
+               <then>
+                   <tag type="MERCHANDISE" />
+                   <tag type="SUB_SUB_MERCHANDISE" />
+               </then>
+               <else>
+                   <if:tag:type type="SUB_MERCHANDISE">
+                       <then>
+                           <tag type="MERCHANDISE" />
+                           <tag type="SUB_MERCHANDISE" />
+                       </then>
+                       <else>
+                           <tag type="MERCHANDISE" />
+                       </else>
+                   </if:tag:type>
+               </else>
+               <else>
+                   <tag type="MERCHANDISE" />
+               </else>
+           </if:tag:type>
+                                    <tag type="dst" key="male.singular.split.name2" />
+                                </then>
+                                <else>
+                                    <tag type="dst" key="male.singular" />
+                                    <tag type="AUX_1" key="male.singular" />
+									
+                                    <tag type="ALUMINIUM_FREE" key="male.singular" />
+                                    <tag type="ALCOHOL_FREE" key="male.singular" />
+                                    <tag type="FRAGRANCE_FREE" key="male.singular" />
+                                    <tag type="SILICONE_FREE" key="male.singular" />
+                                    <tag type="PARABEN_FREE" key="male.singular" />
+                                    <tag type="BIO" key="male.singular" />
+                                    <if:tag:type type="SUB_COLOR">
+                                        <then>
+                                            <tag type="SUB_COLOR" key="male.singular" />
+                                        </then>
+                                        <else>
+                                            <tag type="COLOR" key="male.singular" />
+                                        </else>
+                                    </if:tag:type>
+                                   <tag type="MATERIAL" prefix="de " />
+                                       <tag type="SUB_MATERIAL" prefix="de " />
+				                       <tag type="NATURAL" key="male.singular" />
+					                   <tag type="VEGY_VEGAN" key="male.singular" />
+					                   <tag type="DURATION" key="male.singular" />				
+					                   <tag type="HYPOALLERGENIC" key="male.singular" />	
+					                   <tag type="FEATURE" key="male.singular" />
+					                   <tag type="FINISH" key="male.singular" />
+					                   <tag type="SUPPORT_LEVEL" key="male.singular" />
+					                   <tag type="CONCERN" key="male.singular" />
+					                   <tag type="BENEFIT" key="male.singular" />
+					                   <tag type="HANDMADE" key="male.singular" />
+					                   <tag type="SPECIAL_SIZE" key="male.singular" />
+					                   <tag type="INGREDIENTS" key="male.singular" prefix="con  " />  
+                                       <tag type="UV_PROTECTION" key="male.singular" prefix="con  " />  					
+					                   <tag type="FREE_FROM" key="male.singular" />
+					                   <tag type="COVERAGE" key="male.singular" />
+					                   <tag type="BODY_AREA" key="male.singular" />
+					                   <tag type="SKIN_TONE" key="male.singular" />
+					                   <tag type="SKIN_SHADE" key="male.singular" />
+					                   <tag type="CRUELTY_FREE" key="male.singular" />
+					                   <tag type="GIFT_SETS" key="male.singular" />
+					                   <tag type="MATERNITY" key="male.singular" />
+					                   <tag type="COUNTRY" key="male.singular" />
+					                   <tag type="EDITION" key="male.singular" />
+					                   <tag type="HAIR_TYPE" key="male.singular" prefix="para  " />
+					                   <tag type="HAIR_COLOR" key="male.singular" />
+                                   <if:tag:type type="SUB_SUB_MERCHANDISE">
+               <then>
+                   <tag type="MERCHANDISE" />
+                   <tag type="SUB_SUB_MERCHANDISE" />
+               </then>
+               <else>
+                   <if:tag:type type="SUB_MERCHANDISE">
+                       <then>
+                           <tag type="MERCHANDISE" />
+                           <tag type="SUB_MERCHANDISE" />
+                       </then>
+                       <else>
+                           <tag type="MERCHANDISE" />
+                       </else>
+                   </if:tag:type>
+               </else>
+               <else>
+                   <tag type="MERCHANDISE" />
+               </else>
+           </if:tag:type>
+                                </else>
+                            </if:tag:has>
+                            <tag type="SIZE" prefix="de " />
+                            <tag type="VOLUME" prefix="de " />
+							<tag type="FRAGRANCE" key="male.singular" prefix="con aroma " />
+                            <tag type="PATTERN" key="male.singular" />
+                            <tag type="LOOK" key="male.singular" prefix="look " />
+                            <load key="brand" />
+                            <tag type="SHIPPING_COSTS" key="male.singular" prefix="con " />
+                            <tag type="AUX_5" key="male.singular" /> 
+                            <tag type="SHOP" prefix="en " />
+                            <tag type="STORE" prefix="en " /> 
+                        </then>
+
+                        <else>
+                            <if:dst:has key="female.singular">
+                                <then>
+                                    <if:tag:has type="dst" key="female.singular.split.name">
+                                        <then>
+                                            <tag type="dst" key="female.singular.split.name" />
+											
+                                            <tag type="AUX_1" key="female.singular" />
+                                            <tag type="ALUMINIUM_FREE" key="female.singular" />
+                                            <tag type="ALCOHOL_FREE" key="female.singular" />
+                                            <tag type="FRAGRANCE_FREE" key="female.singular" />
+                                            <tag type="SILICONE_FREE" key="female.singular" />
+                                            <tag type="PARABEN_FREE" key="female.singular" />
+                                            <tag type="BIO" key="female.singular" />
+                                            <if:tag:type type="SUB_COLOR">
+                                                <then>
+                                                    <tag type="SUB_COLOR" key="female.singular" />
+                                                </then>
+                                                <else>
+                                                    <tag type="COLOR" key="female.singular" />
+                                                </else>
+                                            </if:tag:type>
+                                            <tag type="MATERIAL" prefix="de " />
+                                             <tag type="SUB_MATERIAL" prefix="de " />
+					                         <tag type="NATURAL" key="female.singular" />
+					                         <tag type="VEGY_VEGAN" key="female.singular" />
+					                         <tag type="DURATION" key="female.singular" />				
+					                         <tag type="HYPOALLERGENIC" key="female.singular" />	
+					                         <tag type="FEATURE" key="female.singular" />
+					                         <tag type="FINISH" key="female.singular" />
+					                         <tag type="SUPPORT_LEVEL" key="female.singular" />
+					                         <tag type="CONCERN" key="female.singular" />
+					                         <tag type="BENEFIT" key="female.singular" />
+					                         <tag type="HANDMADE" key="female.singular" />
+					                         <tag type="SPECIAL_SIZE" key="female.singular" />
+					                         <tag type="INGREDIENTS" key="female.singular" prefix="con  " />
+                                             <tag type="UV_PROTECTION" key="female.singular" prefix="con  " />					
+					                         <tag type="FREE_FROM" key="female.singular" />
+					                         <tag type="COVERAGE" key="female.singular" />
+					                         <tag type="BODY_AREA" key="female.singular" />
+					                         <tag type="SKIN_TONE" key="female.singular" />
+					                         <tag type="SKIN_SHADE" key="female.singular" />
+					                         <tag type="CRUELTY_FREE" key="female.singular" />
+					                         <tag type="GIFT_SETS" key="female.singular" />
+					                         <tag type="MATERNITY" key="female.singular" />
+					                         <tag type="COUNTRY" key="female.singular" />
+					                         <tag type="EDITION" key="female.singular" />
+					                         <tag type="HAIR_TYPE" key="female.singular" prefix="para  " />
+				                         	 <tag type="HAIR_COLOR" key="female.singular" />
+                                           <if:tag:type type="SUB_SUB_MERCHANDISE">
+               <then>
+                   <tag type="MERCHANDISE" />
+                   <tag type="SUB_SUB_MERCHANDISE" />
+               </then>
+               <else>
+                   <if:tag:type type="SUB_MERCHANDISE">
+                       <then>
+                           <tag type="MERCHANDISE" />
+                           <tag type="SUB_MERCHANDISE" />
+                       </then>
+                       <else>
+                           <tag type="MERCHANDISE" />
+                       </else>
+                   </if:tag:type>
+               </else>
+               <else>
+                   <tag type="MERCHANDISE" />
+               </else>
+           </if:tag:type>
+                                            <tag type="dst" key="female.singular.split.name2" />
+                                        </then>
+                                        <else>
+                                            <tag type="dst" key="female.singular" />
+                                            <tag type="AUX_1" key="female.singular" />
+											
+                                            <tag type="ALUMINIUM_FREE" key="female.singular" />
+                                            <tag type="ALCOHOL_FREE" key="female.singular" />
+                                            <tag type="FRAGRANCE_FREE" key="female.singular" />
+                                            <tag type="SILICONE_FREE" key="female.singular" />
+                                            <tag type="PARABEN_FREE" key="female.singular" />
+                                            <tag type="BIO" key="female.singular" />
+                                            <if:tag:type type="SUB_COLOR">
+                                                <then>
+                                                    <tag type="SUB_COLOR" key="female.singular" />
+                                                </then>
+                                                <else>
+                                                    <tag type="COLOR" key="female.singular" />
+                                                </else>
+                                            </if:tag:type>
+                                            <tag type="MATERIAL" prefix="de " />
+                                             <tag type="SUB_MATERIAL" prefix="de " />
+					                         <tag type="NATURAL" key="female.singular" />
+					                         <tag type="VEGY_VEGAN" key="female.singular" />
+					                         <tag type="DURATION" key="female.singular" />				
+					                         <tag type="HYPOALLERGENIC" key="female.singular" />	
+					                         <tag type="FEATURE" key="female.singular" />
+					                         <tag type="FINISH" key="female.singular" />
+					                         <tag type="SUPPORT_LEVEL" key="female.singular" />
+					                         <tag type="CONCERN" key="female.singular" />
+					                         <tag type="BENEFIT" key="female.singular" />
+					                         <tag type="HANDMADE" key="female.singular" />
+					                         <tag type="SPECIAL_SIZE" key="female.singular" />
+					                         <tag type="INGREDIENTS" key="female.singular" prefix="con  " />
+                                             <tag type="UV_PROTECTION" key="female.singular" prefix="con  " />					
+					                         <tag type="FREE_FROM" key="female.singular" />
+					                         <tag type="COVERAGE" key="female.singular" />
+					                         <tag type="BODY_AREA" key="female.singular" />
+					                         <tag type="SKIN_TONE" key="female.singular" />
+					                         <tag type="SKIN_SHADE" key="female.singular" />
+					                         <tag type="CRUELTY_FREE" key="female.singular" />
+					                         <tag type="GIFT_SETS" key="female.singular" />
+					                         <tag type="MATERNITY" key="female.singular" />
+					                         <tag type="COUNTRY" key="female.singular" />
+					                         <tag type="EDITION" key="female.singular" />
+					                         <tag type="HAIR_TYPE" key="female.singular" prefix="para  " />
+				                         	 <tag type="HAIR_COLOR" key="female.singular" />
+                                            <if:tag:type type="SUB_SUB_MERCHANDISE">
+               <then>
+                   <tag type="MERCHANDISE" />
+                   <tag type="SUB_SUB_MERCHANDISE" />
+               </then>
+               <else>
+                   <if:tag:type type="SUB_MERCHANDISE">
+                       <then>
+                           <tag type="MERCHANDISE" />
+                           <tag type="SUB_MERCHANDISE" />
+                       </then>
+                       <else>
+                           <tag type="MERCHANDISE" />
+                       </else>
+                   </if:tag:type>
+               </else>
+               <else>
+                   <tag type="MERCHANDISE" />
+               </else>
+           </if:tag:type>
+                                        </else>
+                                    </if:tag:has>
+                                    <tag type="SIZE" prefix="de " />
+                                    <tag type="VOLUME" prefix="de " />
+									<tag type="FRAGRANCE" key="female.singular" prefix="con aroma " />
+                                    <tag type="PATTERN" key="female.singular" />
+                                    <tag type="LOOK" key="female.singular" prefix="look " />
+                                    <load key="brand" />
+                                    <tag type="SHIPPING_COSTS" key="female.singular" prefix="con " />
+                                    <tag type="AUX_5" key="female.singular" /> 
+                                    <tag type="SHOP" prefix="en " />
+                                    <tag type="STORE" prefix="en " />
+                                </then>
+                                <else>
+                                    <tag type="dst" />
+                                    <tag type="ALUMINIUM_FREE" />
+                                    <tag type="ALCOHOL_FREE" />
+                                    <tag type="FRAGRANCE_FREE" />
+                                    <tag type="SILICONE_FREE" />
+                                    <tag type="PARABEN_FREE" />
+                                    <if:tag:type type="SUB_SUB_MERCHANDISE">
+               <then>
+                   <tag type="MERCHANDISE" />
+                   <tag type="SUB_SUB_MERCHANDISE" />
+               </then>
+               <else>
+                   <if:tag:type type="SUB_MERCHANDISE">
+                       <then>
+                           <tag type="MERCHANDISE" />
+                           <tag type="SUB_MERCHANDISE" />
+                       </then>
+                       <else>
+                           <tag type="MERCHANDISE" />
+                       </else>
+                   </if:tag:type>
+               </else>
+               <else>
+                   <tag type="MERCHANDISE" />
+               </else>
+           </if:tag:type>
+                                   <tag type="BIO" />
+                                    <load key="brand" />
+                                    <tag type="AUX_5" />
+                                    <tag type="MATERIAL" />
+                                    <tag type="SUB_MATERIAL" prefix="de " />
+					                <tag type="NATURAL" />
+					                <tag type="VEGY_VEGAN" />
+					                <tag type="DURATION" />				
+					                <tag type="HYPOALLERGENIC" />									
+									<tag type="FEATURE" />
+									<tag type="FINISH" />
+									<tag type="SUPPORT_LEVEL" />
+									<tag type="CONCERN" />
+				                   	<tag type="BENEFIT" />
+					                <tag type="HANDMADE" />
+									<tag type="SPECIAL_SIZE" />
+				                 	<tag type="INGREDIENTS" prefix="con  " />   
+									 <tag type="UV_PROTECTION" prefix="con  " />
+				 	                <tag type="FREE_FROM" />
+									<tag type="COVERAGE" />
+									<tag type="BODY_AREA" />
+                                    <tag type="SKIN_TONE"  />
+			                        <tag type="SKIN_SHADE"  />
+				                   	<tag type="CRUELTY_FREE" />
+				                   	<tag type="GIFT_SETS" />
+									<tag type="MATERNITY" />
+									<tag type="COUNTRY" />	
+									<tag type="EDITION" />
+					                <tag type="HAIR_TYPE" prefix="para  " />
+					                <tag type="HAIR_COLOR" />
+
+ 
+                                    <if:tag:type type="SUB_COLOR">
+                                        <then>
+                                            <tag type="SUB_COLOR" />
+                                        </then>
+                                        <else>
+                                            <tag type="COLOR" />
+                                        </else>
+                                    </if:tag:type>
+                                    <tag type="SIZE" prefix="de " />
+                                    <tag type="VOLUME" prefix="de " />
+									<tag type="FRAGRANCE" prefix="con aroma " />
+                                    <tag type="WIDTH" prefix="ancho " />
+                                    <tag type="LENGTH" prefix="largo " />
+                                    <tag type="HEEL_HEIGHT" prefix="con "/>
+                                    <tag type="CUP_SIZE" prefix="en " />
+                                    <tag type="PATTERN" />
+                                    <load key="brand" />
+                                    <tag type="SHOP" prefix="en " />
+                                    <tag type="STORE" prefix="en " />
+                                    <tag type="AUX_1" />
+                                    <tag type="SHIPPING_COSTS" prefix="con " />
+                                </else>
+                            </if:dst:has>
+                        </else>
+                    </if:dst:has>
+                </else>
+            </if:dst:has>
+        </else>
+    </if:dst:has>
+    <tag type="COUPON" key="static" suffix="descuento " />
+    <tag type="AGE" key="static" />
+</headline:template>
