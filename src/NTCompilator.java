@@ -11,6 +11,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.logging.Logger;
 
+/**Note to Chris:
+ * Goal: Get HashMap mapping a String(tagtype) to its positions in all XMLs ArrayList<int>
+ * Problem: I could not add the int of each file iteration directly to an ArrayList<int> which is inside the HashMap
+ * In this class, I first tried to do everything in one method. Iterate each file, get tagtype names, get tagtypes position from each file.
+ * This was not possible so I tried it differently in class PositionCompiler.
+ * The other two methods (Occurences of a tag type in all files, prefix/sufix text of tag types) work fine***/
+
+
 public class NTCompilator {
 
     public HashMap<String,Integer> mapOcurrencesToTagType(){
@@ -26,7 +34,7 @@ public class NTCompilator {
                 int idxKey = line.indexOf("key");
                 int idxQuote = line.indexOf("\"", idxKey + 5);
                 int idxEnd = line.indexOf("/>");
-                if (idx != -1 && idx2 != -1 /**&& idxKey!=-1 && idxQuote!=-1*/) {
+                if (idx != -1 && idx2 != -1 ) {
                     tagType = line.substring(idx + 5, idx2);
                     if ( idxQuote!=-1) {
                         String genderKey = line.substring(idxKey + 4, idxQuote + 1);
@@ -40,6 +48,7 @@ public class NTCompilator {
                     } else {
                         mapQuan.put(tagType, mapQuan.get(tagType) + 1);
                     }
+
 
                     }
             }
@@ -107,9 +116,9 @@ return mapQuan;
                 int idx2 = line.indexOf(" ", idx);
                 int idxKey = line.indexOf("key");
                 int idxQuote = line.indexOf("\"", idxKey + 5);
-                if (idx != -1 && idx2 != -1 /**&& idxKey!=-1 && idxQuote!=-1*/) {
+                if (idx != -1 && idx2 != -1) {
                     String tagType = line.substring(idx + 5, idx2);
-                    String genderKey = line.substring(idxKey + 4, idxQuote + 1);
+                    String genderKey = "";
                     if ( idxQuote!=-1) {
                         genderKey = line.substring(idxKey + 4, idxQuote + 1);
                         //System.out.println(genderKey);
@@ -131,51 +140,19 @@ return mapQuan;
             }
         }
 
-//System.out.println(tags);
+        //System.out.println(tags);
         //System.out.println(positionOfTag);
         //System.out.println(mapPos.size());
         System.out.println(mapPos);
         return mapPos;
     }
- /**   public void mergeTemplate(){
-        HashMap<String,Integer> map1=NTOpener();
-        HashMap<String,Integer> map2=NTOpener();
-        ArrayList<Integer> positions = new ArrayList<Integer>();
-        HashMap<String,ArrayList<Integer>> mergeMap= new HashMap<String, ArrayList<Integer>>();
-
-        for (Map.Entry<String,Integer> e1 : map1.entrySet()){
-            String tagType1 = e1.getKey();
-            //System.out.println(tagType1);
-            Integer pos1 = e1.getValue();
-            //System.out.println(pos1);
-            Integer pos2 = map2.get(tagType1);
-            System.out.println(map2.get(pos2));
-            System.out.println(pos2);
-
-
-            if (tagType1==map2.keySet().toString()){
-                positions.add(pos1);
-                positions.add(pos2);
-                mergeMap.put(tagType1,positions);
-            }
-
-        }
-
-
-
-System.out.println(mergeMap);
-
-
-    }
-
-  */
 
     public static void main(String[] args){
         NTCompilator ntc = new NTCompilator();
         //String result= ntc.NTOpener().toString();
         //System.out.println(result);
-        ntc.mapTagtypeToKeys();
-        //ntc.mapPositionTotagtype();
+        //ntc.mapTagtypeToKeys();
+        ntc.mapPositionTotagtype();
        //ntc.mapOcurrencesToTagType();
     }
 

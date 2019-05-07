@@ -1,4 +1,4 @@
-
+/**
 import com.sun.applet2.AppletParameters;
 import edu.duke.DirectoryResource;
 import edu.duke.FileResource;
@@ -29,7 +29,7 @@ public class ObjectOrientedNTCompilator {
                 int idxKey = line.indexOf("key");
                 int idxQuote = line.indexOf("\"", idxKey + 5);
                 int idxEnd = line.indexOf("/>");
-                if (idx != -1 && idx2 != -1 /**&& idxKey!=-1 && idxQuote!=-1*/) {
+                if (idx != -1 && idx2 != -1 ) {
                     tagType = line.substring(idx + 5, idx2);
                     if ( idxQuote!=-1) {
                         String genderKey = line.substring(idxKey + 4, idxQuote + 1);
@@ -66,7 +66,7 @@ public class ObjectOrientedNTCompilator {
                 int idxKey = line.indexOf("key");
                 int idxQuote = line.indexOf("\"", idxKey + 5);
                 int idxEnd = line.indexOf("/>");
-                if (idx != -1 && idx2 != -1 /**&& idxKey!=-1 && idxQuote!=-1*/) {
+                if (idx != -1 && idx2 != -1 ) {
                     tagType = line.substring(idx + 5, idx2);
                     if ( idxQuote!=-1) {
                         String genderKey = line.substring(idxKey + 4, idxQuote + 1);
@@ -149,13 +149,6 @@ public class ObjectOrientedNTCompilator {
 
     }
 
-    public static void main(String[] args){
-        ObjectOrientedNTCompilator ontc = new ObjectOrientedNTCompilator();
-        //String result= ntc.NTOpener().toString();
-        //System.out.println(result);
-        //ontc.mapPositionTotagtype();
-        //ntc.mapTagtypeToKeys();
-        //ntc.mapPositionTotagtype();
-    }
 
 }
+*/
