@@ -1,25 +1,15 @@
-
-import com.sun.applet2.AppletParameters;
 import edu.duke.DirectoryResource;
 import edu.duke.FileResource;
-import edu.duke.StorageResource;
+import org.omg.PortableInterceptor.INACTIVE;
 
-import java.util.Map;
-import java.util.Scanner.*;
-import java.io.*;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.logging.Logger;
 
-/**Note to Chris:
- * Goal: Get HashMap mapping a String(tagtype) to its positions in all XMLs ArrayList<int>
- * Problem: I could not add the int of each file iteration directly to an ArrayList<int> which is inside the HashMap
- * In this class, I first tried to do everything in one method. Iterate each file, get tagtype names, get tagtypes position from each file.
- * This was not possible so I tried it differently in class PositionCompiler.
- * The other two methods (Occurences of a tag type in all files, prefix/sufix text of tag types) work fine***/
-
-
-public class NTCompilator {
+public class OONTCompilator {
+    ArrayList<TagType> TagTypesWithAttributes = new ArrayList<TagType>();
+    ArrayList<TagType> TagTypesWithPosition = new ArrayList<TagType>();
+    ArrayList<TagType> TagTypesCollection = new ArrayList<TagType>();
 
     public HashMap<String,Integer> mapOcurrencesToTagType(){
         String tagType="";
@@ -50,18 +40,21 @@ public class NTCompilator {
                     }
 
 
-                    }
+                }
             }
         }
-System.out.println("Number of TagTypes: "+mapQuan.keySet().size());
-System.out.println("TagTypes: "+mapQuan.keySet());
+        System.out.println("Number of TagTypes: "+mapQuan.keySet().size());
+        System.out.println("TagTypes: "+mapQuan.keySet());
 
-System.out.println(mapQuan);
-return mapQuan;
+        System.out.println(mapQuan);
+        return mapQuan;
     }
 
 
-    public HashMap<String,String> mapTagtypeToKeys(){
+    public ArrayList<TagType> mapTagtypeToKeys(){
+
+        //ArrayList<TagType> TagTypesWithAttributes = new ArrayList<TagType>();
+
 
         HashMap<String,String> mapKeys = new HashMap<String,String>();
         DirectoryResource dr = new DirectoryResource();
@@ -88,26 +81,29 @@ return mapQuan;
                         }
                     }
                     //System.out.println(attributes);
-                    if (!mapKeys.keySet().contains(tagType) && attributes.length()>2) {
-                        mapKeys.put(tagType,attributes);
+                    TagType tag = new TagType(tagType,attributes);
+                    //System.out.println(tag.getTagName());
+
+                    if (!TagTypesWithAttributes.contains(tag)) {
+                        TagTypesWithAttributes.add(tag);
                     }
                 }
             }
         }
-        System.out.println(mapKeys);
-        return mapKeys;
+        System.out.println(TagTypesWithAttributes);
+        return TagTypesWithAttributes;
     }
 
-    public HashMap<String,Integer> mapPositionTotagtype(){
+    public ArrayList<TagType> mapPositionTotagtype(){
         int position=0;
         int count =0;
         String positionOfTag="";
-        ArrayList<String> tags= new ArrayList<String>();
         ArrayList<Integer> pos= new ArrayList<Integer>();
         HashMap<String,Integer> mapPos = new HashMap<String, Integer>();
         DirectoryResource dr = new DirectoryResource();
         //FileResource fr = new FileResource();
         for (File f : dr.selectedFiles()) {
+            ArrayList<String> tags= new ArrayList<String>();
             String fileName = f.getName();
             FileResource fr = new FileResource(f);
             //System.out.print(xml);
@@ -129,6 +125,9 @@ return mapQuan;
                     //System.out.println(tagType);
                     if (!tags.contains(tagType)) {
                         tags.add(tagType);
+                        TagType tagAndPos = new TagType(tagType,tags.size());
+                        //System.out.println(tagAndPos);
+                        TagTypesWithPosition.add(tagAndPos);
                     }
                     if (!mapPos.keySet().contains(tagType)) {
                         mapPos.put(tagType,tags.size());
@@ -142,18 +141,49 @@ return mapQuan;
 
         //System.out.println(tags);
         //System.out.println(positionOfTag);
-        System.out.println(mapPos.size());
-        System.out.println(mapPos);
-        return mapPos;
+        //System.out.println(mapPos.size());
+        //System.out.println(mapPos);
+        return TagTypesWithPosition;
+    }
+
+    public HashMap<String, Integer> tagMap(){
+        int counter = 0;
+        ArrayList<TagType> position = new ArrayList<>();
+        ArrayList<TagType> keyValue = new ArrayList<>();
+        ArrayList<TagType> completeTagType = new ArrayList<>();
+        position=mapPositionTotagtype();
+        keyValue=mapTagtypeToKeys();
+        HashMap<String, Integer> map = new HashMap<>();
+        System.out.println(position);
+        for (int k = 0; k<position.size();k++){
+            //System.out.println(position.get(k).getTagName());
+             if (!map.keySet().contains(position.get(k).getTagName())){
+                 map.put(position.get(k).getTagName(),position.get(k).getPosition());
+                 counter = 1;
+             }
+             else {
+                 counter=counter+1;
+                 map.put(position.get(k).getTagName(),(map.get(position.get(k).getTagName())+position.get(k).getPosition())/counter);
+             }
+
+         }
+
+
+        //return name of tag and array list of all it's positions
+        System.out.println("complete array of objects "+completeTagType);
+        System.out.println("map "+map);
+        System.out.println("map size "+map.size());
+        return map;
     }
 
     public static void main(String[] args){
-        NTCompilator ntc = new NTCompilator();
-        //String result= ntc.NTOpener().toString();
+OONTCompilator oont = new OONTCompilator();
+    //String result= ntc.NTOpener().toString();
         //System.out.println(result);
-        //ntc.mapTagtypeToKeys();
-        ntc.mapPositionTotagtype();
-       //ntc.mapOcurrencesToTagType();
+        //oont.mapTagtypeToKeys();
+        oont.tagMap();
+        //ntc.mapOcurrencesToTagType();
     }
+
 
 }

@@ -2,10 +2,7 @@ import edu.duke.DirectoryResource;
 import edu.duke.FileResource;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**Note to Chris: I split what I wanted to do in methods that only do one thing.
  * In that way I don't have to do for loops inside another for loop, which made it impossible to create an arrayList for each tagtype, but considering all files (not for each file).
@@ -16,11 +13,13 @@ import java.util.Map;
 public class PositionCompiler {
 //    ArrayList<String> tagTypeList = new ArrayList<>();
   ArrayList<Integer> positionArray = new ArrayList<Integer>();
+    //ArrayList<TagType> CollectionOfTagtypes = new ArrayList<>();
 
 
     public ArrayList<String> makeList (FileResource fr){
         String tags = fr.asString();
         String tagType="";
+        //String tagType="";
         ArrayList<String> tagTypeList = new ArrayList<>();
         for (String line : fr.lines()) {
             int idx = line.indexOf("type=", 0);
@@ -64,6 +63,7 @@ public class PositionCompiler {
                 if (!mapPos.keySet().contains(tagNames)){
                     mapPos.put(tagNames,tagTypeList.indexOf(tagNames));
                 }
+
             }
 
         }
@@ -109,13 +109,22 @@ public class PositionCompiler {
             tagTypeList = makeList(fr);
             System.out.println(tagTypeList);
             HashMap<String, Integer> mapPos = mapPosition(tagTypeList);
-            makePositionArray("\"DIGITS\"",mapPos);
-
+            makePositionArray("\"AUX_1\"",mapPos);
         }
     }
 
     public static void main(String[] args){
         PositionCompiler pc = new PositionCompiler();
         pc.tester();
+     /**  * ArrayList<TagType> CollectionOfTagtypes = new ArrayList<>();
+        for (int i = 0 ; i < 10; i++){
+            TagType mytest = new TagType("COLOR","blabla",i);
+            CollectionOfTagtypes.add(mytest);
+        }
+
+        for (TagType TagTzpeDetails : CollectionOfTagtypes){
+            System.out.println(TagTzpeDetails);
+        }*/
+
     }
 }
